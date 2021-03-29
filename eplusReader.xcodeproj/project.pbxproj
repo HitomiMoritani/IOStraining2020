@@ -1,0 +1,598 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		22D99ED62611F95900926B30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D99ED52611F95900926B30 /* AppDelegate.swift */; };
+		22D99ED82611F95900926B30 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D99ED72611F95900926B30 /* SceneDelegate.swift */; };
+		22D99EDA2611F95900926B30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D99ED92611F95900926B30 /* ViewController.swift */; };
+		22D99EDD2611F95900926B30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22D99EDB2611F95900926B30 /* Main.storyboard */; };
+		22D99EDF2611F95A00926B30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22D99EDE2611F95A00926B30 /* Assets.xcassets */; };
+		22D99EE22611F95A00926B30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22D99EE02611F95A00926B30 /* LaunchScreen.storyboard */; };
+		22D99EED2611F95A00926B30 /* eplusReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D99EEC2611F95A00926B30 /* eplusReaderTests.swift */; };
+		22D99EF82611F95A00926B30 /* eplusReaderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D99EF72611F95A00926B30 /* eplusReaderUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		22D99EE92611F95A00926B30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 22D99ECA2611F95900926B30 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22D99ED12611F95900926B30;
+			remoteInfo = eplusReader;
+		};
+		22D99EF42611F95A00926B30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 22D99ECA2611F95900926B30 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22D99ED12611F95900926B30;
+			remoteInfo = eplusReader;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		22D99ED22611F95900926B30 /* eplusReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eplusReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		22D99ED52611F95900926B30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		22D99ED72611F95900926B30 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		22D99ED92611F95900926B30 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		22D99EDC2611F95900926B30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		22D99EDE2611F95A00926B30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		22D99EE12611F95A00926B30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		22D99EE32611F95A00926B30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22D99EE82611F95A00926B30 /* eplusReaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eplusReaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		22D99EEC2611F95A00926B30 /* eplusReaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eplusReaderTests.swift; sourceTree = "<group>"; };
+		22D99EEE2611F95A00926B30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22D99EF32611F95A00926B30 /* eplusReaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eplusReaderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		22D99EF72611F95A00926B30 /* eplusReaderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eplusReaderUITests.swift; sourceTree = "<group>"; };
+		22D99EF92611F95A00926B30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		22D99ECF2611F95900926B30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22D99EE52611F95A00926B30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22D99EF02611F95A00926B30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		22D99EC92611F95900926B30 = {
+			isa = PBXGroup;
+			children = (
+				22D99ED42611F95900926B30 /* eplusReader */,
+				22D99EEB2611F95A00926B30 /* eplusReaderTests */,
+				22D99EF62611F95A00926B30 /* eplusReaderUITests */,
+				22D99ED32611F95900926B30 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		22D99ED32611F95900926B30 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				22D99ED22611F95900926B30 /* eplusReader.app */,
+				22D99EE82611F95A00926B30 /* eplusReaderTests.xctest */,
+				22D99EF32611F95A00926B30 /* eplusReaderUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		22D99ED42611F95900926B30 /* eplusReader */ = {
+			isa = PBXGroup;
+			children = (
+				22D99ED52611F95900926B30 /* AppDelegate.swift */,
+				22D99ED72611F95900926B30 /* SceneDelegate.swift */,
+				22D99ED92611F95900926B30 /* ViewController.swift */,
+				22D99EDB2611F95900926B30 /* Main.storyboard */,
+				22D99EDE2611F95A00926B30 /* Assets.xcassets */,
+				22D99EE02611F95A00926B30 /* LaunchScreen.storyboard */,
+				22D99EE32611F95A00926B30 /* Info.plist */,
+			);
+			path = eplusReader;
+			sourceTree = "<group>";
+		};
+		22D99EEB2611F95A00926B30 /* eplusReaderTests */ = {
+			isa = PBXGroup;
+			children = (
+				22D99EEC2611F95A00926B30 /* eplusReaderTests.swift */,
+				22D99EEE2611F95A00926B30 /* Info.plist */,
+			);
+			path = eplusReaderTests;
+			sourceTree = "<group>";
+		};
+		22D99EF62611F95A00926B30 /* eplusReaderUITests */ = {
+			isa = PBXGroup;
+			children = (
+				22D99EF72611F95A00926B30 /* eplusReaderUITests.swift */,
+				22D99EF92611F95A00926B30 /* Info.plist */,
+			);
+			path = eplusReaderUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		22D99ED12611F95900926B30 /* eplusReader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22D99EFC2611F95A00926B30 /* Build configuration list for PBXNativeTarget "eplusReader" */;
+			buildPhases = (
+				22D99ECE2611F95900926B30 /* Sources */,
+				22D99ECF2611F95900926B30 /* Frameworks */,
+				22D99ED02611F95900926B30 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = eplusReader;
+			productName = eplusReader;
+			productReference = 22D99ED22611F95900926B30 /* eplusReader.app */;
+			productType = "com.apple.product-type.application";
+		};
+		22D99EE72611F95A00926B30 /* eplusReaderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22D99EFF2611F95A00926B30 /* Build configuration list for PBXNativeTarget "eplusReaderTests" */;
+			buildPhases = (
+				22D99EE42611F95A00926B30 /* Sources */,
+				22D99EE52611F95A00926B30 /* Frameworks */,
+				22D99EE62611F95A00926B30 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				22D99EEA2611F95A00926B30 /* PBXTargetDependency */,
+			);
+			name = eplusReaderTests;
+			productName = eplusReaderTests;
+			productReference = 22D99EE82611F95A00926B30 /* eplusReaderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		22D99EF22611F95A00926B30 /* eplusReaderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22D99F022611F95A00926B30 /* Build configuration list for PBXNativeTarget "eplusReaderUITests" */;
+			buildPhases = (
+				22D99EEF2611F95A00926B30 /* Sources */,
+				22D99EF02611F95A00926B30 /* Frameworks */,
+				22D99EF12611F95A00926B30 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				22D99EF52611F95A00926B30 /* PBXTargetDependency */,
+			);
+			name = eplusReaderUITests;
+			productName = eplusReaderUITests;
+			productReference = 22D99EF32611F95A00926B30 /* eplusReaderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		22D99ECA2611F95900926B30 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					22D99ED12611F95900926B30 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					22D99EE72611F95A00926B30 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 22D99ED12611F95900926B30;
+					};
+					22D99EF22611F95A00926B30 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 22D99ED12611F95900926B30;
+					};
+				};
+			};
+			buildConfigurationList = 22D99ECD2611F95900926B30 /* Build configuration list for PBXProject "eplusReader" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 22D99EC92611F95900926B30;
+			productRefGroup = 22D99ED32611F95900926B30 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				22D99ED12611F95900926B30 /* eplusReader */,
+				22D99EE72611F95A00926B30 /* eplusReaderTests */,
+				22D99EF22611F95A00926B30 /* eplusReaderUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		22D99ED02611F95900926B30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22D99EE22611F95A00926B30 /* LaunchScreen.storyboard in Resources */,
+				22D99EDF2611F95A00926B30 /* Assets.xcassets in Resources */,
+				22D99EDD2611F95900926B30 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22D99EE62611F95A00926B30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22D99EF12611F95A00926B30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		22D99ECE2611F95900926B30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22D99EDA2611F95900926B30 /* ViewController.swift in Sources */,
+				22D99ED62611F95900926B30 /* AppDelegate.swift in Sources */,
+				22D99ED82611F95900926B30 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22D99EE42611F95A00926B30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22D99EED2611F95A00926B30 /* eplusReaderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22D99EEF2611F95A00926B30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22D99EF82611F95A00926B30 /* eplusReaderUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		22D99EEA2611F95A00926B30 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22D99ED12611F95900926B30 /* eplusReader */;
+			targetProxy = 22D99EE92611F95A00926B30 /* PBXContainerItemProxy */;
+		};
+		22D99EF52611F95A00926B30 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22D99ED12611F95900926B30 /* eplusReader */;
+			targetProxy = 22D99EF42611F95A00926B30 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		22D99EDB2611F95900926B30 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				22D99EDC2611F95900926B30 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		22D99EE02611F95A00926B30 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				22D99EE12611F95A00926B30 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		22D99EFA2611F95A00926B30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		22D99EFB2611F95A00926B30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		22D99EFD2611F95A00926B30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H44SGQ9PNQ;
+				INFOPLIST_FILE = eplusReader/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = moritani.eplusReader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		22D99EFE2611F95A00926B30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H44SGQ9PNQ;
+				INFOPLIST_FILE = eplusReader/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = moritani.eplusReader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		22D99F002611F95A00926B30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H44SGQ9PNQ;
+				INFOPLIST_FILE = eplusReaderTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = moritani.eplusReaderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/eplusReader.app/eplusReader";
+			};
+			name = Debug;
+		};
+		22D99F012611F95A00926B30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H44SGQ9PNQ;
+				INFOPLIST_FILE = eplusReaderTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = moritani.eplusReaderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/eplusReader.app/eplusReader";
+			};
+			name = Release;
+		};
+		22D99F032611F95A00926B30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H44SGQ9PNQ;
+				INFOPLIST_FILE = eplusReaderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = moritani.eplusReaderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = eplusReader;
+			};
+			name = Debug;
+		};
+		22D99F042611F95A00926B30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H44SGQ9PNQ;
+				INFOPLIST_FILE = eplusReaderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = moritani.eplusReaderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = eplusReader;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		22D99ECD2611F95900926B30 /* Build configuration list for PBXProject "eplusReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22D99EFA2611F95A00926B30 /* Debug */,
+				22D99EFB2611F95A00926B30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22D99EFC2611F95A00926B30 /* Build configuration list for PBXNativeTarget "eplusReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22D99EFD2611F95A00926B30 /* Debug */,
+				22D99EFE2611F95A00926B30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22D99EFF2611F95A00926B30 /* Build configuration list for PBXNativeTarget "eplusReaderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22D99F002611F95A00926B30 /* Debug */,
+				22D99F012611F95A00926B30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22D99F022611F95A00926B30 /* Build configuration list for PBXNativeTarget "eplusReaderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22D99F032611F95A00926B30 /* Debug */,
+				22D99F042611F95A00926B30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 22D99ECA2611F95900926B30 /* Project object */;
+}
