@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2291DDE5261456440055FE03 /* BooklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2291DDE4261456440055FE03 /* BooklistViewController.swift */; };
+		2291DDF5261581460055FE03 /* List.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2291DDF4261581460055FE03 /* List.storyboard */; };
+		2291DE0226159C310055FE03 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2291DE0126159C310055FE03 /* ListViewController.swift */; };
 		22D99ED62611F95900926B30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D99ED52611F95900926B30 /* AppDelegate.swift */; };
 		22D99ED82611F95900926B30 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D99ED72611F95900926B30 /* SceneDelegate.swift */; };
 		22D99EDA2611F95900926B30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D99ED92611F95900926B30 /* ViewController.swift */; };
@@ -35,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2291DDE4261456440055FE03 /* BooklistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooklistViewController.swift; sourceTree = "<group>"; };
+		2291DDF4261581460055FE03 /* List.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = List.storyboard; sourceTree = "<group>"; };
+		2291DE0126159C310055FE03 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		22D99ED22611F95900926B30 /* eplusReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eplusReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22D99ED52611F95900926B30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22D99ED72611F95900926B30 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,9 +106,12 @@
 			isa = PBXGroup;
 			children = (
 				22D99ED52611F95900926B30 /* AppDelegate.swift */,
+				2291DDE4261456440055FE03 /* BooklistViewController.swift */,
 				22D99ED72611F95900926B30 /* SceneDelegate.swift */,
 				22D99ED92611F95900926B30 /* ViewController.swift */,
 				22D99EDB2611F95900926B30 /* Main.storyboard */,
+				2291DDF4261581460055FE03 /* List.storyboard */,
+				2291DE0126159C310055FE03 /* ListViewController.swift */,
 				22D99EDE2611F95A00926B30 /* Assets.xcassets */,
 				22D99EE02611F95A00926B30 /* LaunchScreen.storyboard */,
 				22D99EE32611F95A00926B30 /* Info.plist */,
@@ -233,6 +242,7 @@
 			files = (
 				22D99EE22611F95A00926B30 /* LaunchScreen.storyboard in Resources */,
 				22D99EDF2611F95A00926B30 /* Assets.xcassets in Resources */,
+				2291DDF5261581460055FE03 /* List.storyboard in Resources */,
 				22D99EDD2611F95900926B30 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,7 +269,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				22D99EDA2611F95900926B30 /* ViewController.swift in Sources */,
+				2291DDE5261456440055FE03 /* BooklistViewController.swift in Sources */,
 				22D99ED62611F95900926B30 /* AppDelegate.swift in Sources */,
+				2291DE0226159C310055FE03 /* ListViewController.swift in Sources */,
 				22D99ED82611F95900926B30 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -434,7 +446,6 @@
 		22D99EFD2611F95A00926B30 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H44SGQ9PNQ;
@@ -453,7 +464,6 @@
 		22D99EFE2611F95A00926B30 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H44SGQ9PNQ;

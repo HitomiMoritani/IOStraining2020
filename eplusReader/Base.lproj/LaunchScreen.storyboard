@@ -16,43 +16,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="BCa-PS-leJ">
-                                <rect key="frame" x="-5" y="150" width="424" height="236"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="236" id="Xvh-dX-d0P"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="286" id="lKm-rj-i86"/>
-                                </constraints>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="logo2" translatesAutoresizingMaskIntoConstraints="NO" id="U1q-hV-q1W">
+                                <rect key="frame" x="99" y="254" width="216" height="228"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BOOKS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1fQ-Ur-aW0">
-                                <rect key="frame" x="116.66666666666669" y="416" width="181" height="65.666666666666686"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="55"/>
-                                <color key="textColor" red="1" green="0.58011840356401523" blue="0.18972115436013848" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DILECT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SOz-zx-uxf">
-                                <rect key="frame" x="117.66666666666669" y="370" width="179" height="66"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="55"/>
-                                <color key="textColor" systemColor="systemOrangeColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DIRECT  PUBLISHING" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MsH-I6-TCb">
-                                <rect key="frame" x="124.66666666666669" y="476" width="165" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="0.5801184036" blue="0.18972115440000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="MsH-I6-TCb" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="5FB-q5-0Mn"/>
-                            <constraint firstItem="1fQ-Ur-aW0" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="9vB-y4-jMB"/>
-                            <constraint firstItem="BCa-PS-leJ" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="F6Z-mr-l0H"/>
-                            <constraint firstItem="MsH-I6-TCb" firstAttribute="top" secondItem="SOz-zx-uxf" secondAttribute="bottom" constant="40" id="bMV-hF-TNL"/>
-                            <constraint firstItem="SOz-zx-uxf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="370" id="e1S-zL-26R"/>
-                            <constraint firstItem="1fQ-Ur-aW0" firstAttribute="top" secondItem="BCa-PS-leJ" secondAttribute="bottom" constant="30" id="mLG-zT-Rhh"/>
-                            <constraint firstItem="SOz-zx-uxf" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="mwG-OM-ULc"/>
-                            <constraint firstItem="BCa-PS-leJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="sNl-ms-uWv"/>
+                            <constraint firstItem="U1q-hV-q1W" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="cfQ-2Z-wbU"/>
+                            <constraint firstItem="U1q-hV-q1W" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="zCZ-3J-2el"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -62,12 +34,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo" width="424" height="332"/>
+        <image name="logo2" width="216" height="228"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
