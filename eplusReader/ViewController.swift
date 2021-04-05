@@ -8,19 +8,30 @@
 import UIKit
 
 class ViewController: UIViewController {
-//画面をロードした瞬間にして欲しいことを書く（＋＠画面終了時にしたい処理も他にあるよ）
+    
+    //textViewを宣言
+    @IBOutlet weak var ruleText: UITextView!
+    //画面をロードした瞬間にして欲しいことを書く
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        //textViewを編集不可にする
+        self.ruleText.isEditable = false;
+        
+        // 枠のカラー
+        ruleText.layer.borderColor = UIColor.gray.cgColor
+        
+        // 枠の幅
+        ruleText.layer.borderWidth = 1.0
     }
-    
-    @IBAction func tap(_ sender: Any) {
-        //まずは、違うstororyboardであることをここで定義します（フロア指定。１階）
-        let anotherStoryboard:UIStoryboard = UIStoryboard(name: "List", bundle: nil)
-        //どのviewかを指定（部屋番号を指定。101号室的な）
-        let anotherViewController: UIViewController = anotherStoryboard.instantiateViewController(withIdentifier:"List")
+    @IBAction func tapAcceptButton(_ sender: Any) {
+        //まずは、違うstororyboardであることをここで定義します
+        let anotherStoryboard: UIStoryboard = UIStoryboard(name: "List", bundle: nil)
+        //どのviewかを指定
+        let anotherViewController: UIViewController = anotherStoryboard.instantiateViewController(withIdentifier: "List")
         //画面遷移が実行
-        self.present(anotherViewController, animated: true, completion: nil)
+        self.navigationController?.pushViewController(anotherViewController, animated: true)
         
     }
 }

@@ -8,39 +8,71 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--title-->
         <scene sceneID="yzh-fP-ZEf">
             <objects>
-                <viewController storyboardIdentifier="List" modalPresentationStyle="fullScreen" id="lex-B7-JOe" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="List" modalPresentationStyle="fullScreen" id="lex-B7-JOe" customClass="ListViewController" customModule="eplusReader" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" restorationIdentifier="List" id="0Ip-su-SVP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Image-1" translatesAutoresizingMaskIntoConstraints="NO" id="3Zw-Rv-SbC">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="リスト" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jf9-xZ-zB6">
-                                <rect key="frame" x="169" y="35" width="106" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QeY-hz-5Gg">
+                                <rect key="frame" x="20" y="76" width="374" height="640"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="bookInfoCell" textLabel="2ar-Lc-YVy" style="IBUITableViewCellStyleDefault" id="ABJ-5j-bKZ">
+                                        <rect key="frame" x="0.0" y="28" width="374" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ABJ-5j-bKZ" id="U8V-og-rwz">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2ar-Lc-YVy">
+                                                    <rect key="frame" x="20" y="0.0" width="334" height="43.666667938232422"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="HuH-Ur-dyG">
+                                <rect key="frame" x="20" y="10" width="374" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="nwj-5m-kPq"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <viewLayoutGuide key="safeArea" id="Cu9-OT-iFE"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="Cu9-OT-iFE" firstAttribute="bottom" secondItem="QeY-hz-5Gg" secondAttribute="bottom" constant="20" id="0Bh-lX-6Gs"/>
+                            <constraint firstItem="HuH-Ur-dyG" firstAttribute="leading" secondItem="Cu9-OT-iFE" secondAttribute="leading" constant="20" id="4Dd-U4-uyE"/>
+                            <constraint firstItem="QeY-hz-5Gg" firstAttribute="top" secondItem="HuH-Ur-dyG" secondAttribute="bottom" constant="10" id="Cjw-M2-Shq"/>
+                            <constraint firstItem="Cu9-OT-iFE" firstAttribute="trailing" secondItem="HuH-Ur-dyG" secondAttribute="trailing" constant="20" id="GJY-u4-Ddn"/>
+                            <constraint firstItem="Cu9-OT-iFE" firstAttribute="trailing" secondItem="QeY-hz-5Gg" secondAttribute="trailing" constant="20" id="bme-xG-LCW"/>
+                            <constraint firstItem="QeY-hz-5Gg" firstAttribute="leading" secondItem="Cu9-OT-iFE" secondAttribute="leading" constant="20" id="qGE-gC-ujZ"/>
+                            <constraint firstItem="HuH-Ur-dyG" firstAttribute="top" secondItem="Cu9-OT-iFE" secondAttribute="top" constant="10" id="xBc-mH-LZh"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="title" id="i66-eI-58s"/>
+                    <connections>
+                        <outlet property="searchBook" destination="HuH-Ur-dyG" id="oLY-1s-2bm"/>
+                        <outlet property="tableView" destination="QeY-hz-5Gg" id="Xgg-aF-MIu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m9Q-eo-ljn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-206" y="2"/>
+            <point key="canvasLocation" x="4327.536231884058" y="1.6304347826086958"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Image-1" width="654" height="136"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
