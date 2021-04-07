@@ -57,6 +57,10 @@ class ListViewController: UIViewController, UISearchBarDelegate, UITableViewDele
             "8/23/17:33",
             "8/23/17:41"]
      
+    //検索結果配列
+       var searchResult = [String]()
+    
+    
    override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -69,6 +73,9 @@ class ListViewController: UIViewController, UISearchBarDelegate, UITableViewDele
         searchBook.delegate = self
         //入力のヒントとなる、プレースホルダーを設定
         searchBook.placeholder = "検索"
+    
+    //何も入力されていなくてもReturnキーを押せるようにする。
+        searchBook.enablesReturnKeyAutomatically = false
     }
     
     
