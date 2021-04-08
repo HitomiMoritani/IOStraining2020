@@ -8,30 +8,44 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--お知らせタイトル-->
         <scene sceneID="HD4-4O-KBU">
             <objects>
-                <viewController storyboardIdentifier="ListDeetails" id="Mnv-1K-hkR" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ListDetails" id="Mnv-1K-hkR" customClass="ListDetails" customModule="eplusReader" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aTR-Lh-CCH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Image-1" translatesAutoresizingMaskIntoConstraints="NO" id="gLi-tq-rvu">
-                                <rect key="frame" x="-152" y="41" width="522" height="123"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hJ4-Gb-5r7">
+                                <rect key="frame" x="0.0" y="44" width="414" height="692"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zQg-Jd-kjF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zQg-Jd-kjF" firstAttribute="trailing" secondItem="hJ4-Gb-5r7" secondAttribute="trailing" id="5km-xC-Acm"/>
+                            <constraint firstItem="zQg-Jd-kjF" firstAttribute="bottom" secondItem="hJ4-Gb-5r7" secondAttribute="bottom" id="C3l-3h-Cg1"/>
+                            <constraint firstItem="hJ4-Gb-5r7" firstAttribute="top" secondItem="zQg-Jd-kjF" secondAttribute="top" id="G99-a5-CyV"/>
+                            <constraint firstItem="hJ4-Gb-5r7" firstAttribute="leading" secondItem="zQg-Jd-kjF" secondAttribute="leading" id="cmf-we-wcY"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="お知らせタイトル" id="pJO-83-tF0"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="webView" destination="hJ4-Gb-5r7" id="5bw-h6-ZUZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="emr-cu-ska" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-468.11594202898556" y="64.402173913043484"/>
+            <point key="canvasLocation" x="-483" y="8"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Image-1" width="654" height="136"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

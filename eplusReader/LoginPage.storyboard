@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ログイン-->
+        <scene sceneID="5aS-Hr-IEg">
+            <objects>
+                <viewController storyboardIdentifier="LoginPage" id="FBd-p8-zaL" customClass="LoginViewController" customModule="eplusReader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="W8t-IR-vlk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dg1-w8-CAk">
+                                <rect key="frame" x="115" y="769" width="184" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="ログインする"/>
+                                <connections>
+                                    <action selector="moveList:" destination="FBd-p8-zaL" eventType="touchUpInside" id="Sq0-12-ICX"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="loginPageIcon" translatesAutoresizingMaskIntoConstraints="NO" id="vui-Yg-SV0">
+                                <rect key="frame" x="44" y="118" width="326" height="223"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="メールアドレス" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wj0-q5-lvO">
+                                <rect key="frame" x="65" y="361" width="284" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="パスワード" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZOu-c8-0tB">
+                                <rect key="frame" x="65" y="459" width="284" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Aki-gp-wgR">
+                                <rect key="frame" x="65" y="503" width="284" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DE8-kz-EVH">
+                                <rect key="frame" x="65" y="405" width="284" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="unJ-zK-F9D"/>
+                        <color key="backgroundColor" red="0.94903236629999999" green="0.94899672270000002" blue="0.94902092220000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="unJ-zK-F9D" firstAttribute="trailing" secondItem="vui-Yg-SV0" secondAttribute="trailing" constant="44" id="7zJ-Dc-3zr"/>
+                            <constraint firstItem="unJ-zK-F9D" firstAttribute="trailing" secondItem="ZOu-c8-0tB" secondAttribute="trailing" constant="65" id="IGt-EP-1aa"/>
+                            <constraint firstItem="Aki-gp-wgR" firstAttribute="leading" secondItem="unJ-zK-F9D" secondAttribute="leading" constant="65" id="IQY-HR-xvi"/>
+                            <constraint firstItem="DE8-kz-EVH" firstAttribute="top" secondItem="Wj0-q5-lvO" secondAttribute="bottom" constant="10" id="J7d-rc-ig3"/>
+                            <constraint firstItem="Wj0-q5-lvO" firstAttribute="leading" secondItem="unJ-zK-F9D" secondAttribute="leading" constant="65" id="Kqp-wZ-Tfw"/>
+                            <constraint firstItem="vui-Yg-SV0" firstAttribute="top" secondItem="unJ-zK-F9D" secondAttribute="top" constant="30" id="Mx7-rD-jH3"/>
+                            <constraint firstItem="unJ-zK-F9D" firstAttribute="trailing" secondItem="Aki-gp-wgR" secondAttribute="trailing" constant="65" id="UjV-ZT-Muz"/>
+                            <constraint firstItem="Aki-gp-wgR" firstAttribute="top" secondItem="ZOu-c8-0tB" secondAttribute="bottom" constant="10" id="cVm-5V-kj2"/>
+                            <constraint firstItem="Wj0-q5-lvO" firstAttribute="top" secondItem="vui-Yg-SV0" secondAttribute="bottom" constant="20" id="eM1-u2-xjc"/>
+                            <constraint firstItem="unJ-zK-F9D" firstAttribute="trailing" secondItem="Wj0-q5-lvO" secondAttribute="trailing" constant="65" id="fa5-QS-8Gk"/>
+                            <constraint firstItem="DE8-kz-EVH" firstAttribute="leading" secondItem="unJ-zK-F9D" secondAttribute="leading" constant="65" id="kgf-iW-LsP"/>
+                            <constraint firstItem="vui-Yg-SV0" firstAttribute="leading" secondItem="unJ-zK-F9D" secondAttribute="leading" constant="44" id="mkh-F0-RMQ"/>
+                            <constraint firstItem="unJ-zK-F9D" firstAttribute="trailing" secondItem="DE8-kz-EVH" secondAttribute="trailing" constant="65" id="pFh-HK-3pz"/>
+                            <constraint firstItem="ZOu-c8-0tB" firstAttribute="top" secondItem="DE8-kz-EVH" secondAttribute="bottom" constant="20" id="pKl-vq-jep"/>
+                            <constraint firstItem="ZOu-c8-0tB" firstAttribute="leading" secondItem="unJ-zK-F9D" secondAttribute="leading" constant="65" id="uIK-Cb-DYh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="ログイン" id="3LL-BZ-VIi"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rAf-IX-c8R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140.57971014492756" y="140.625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="loginPageIcon" width="434" height="223"/>
+    </resources>
+</document>
