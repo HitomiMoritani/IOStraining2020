@@ -17,8 +17,6 @@ class LoginViewController: UIViewController {
         view.endEditing(true)
     }
 
-   
-
     
     @IBAction func moveList(_ sender: Any) {
         let anotherStoryboard: UIStoryboard = UIStoryboard(name: "List", bundle: nil)

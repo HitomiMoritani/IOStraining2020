@@ -22,15 +22,16 @@ class ListViewController: UIViewController, UISearchBarDelegate, UITableViewDele
         ["bookArt": "moimoi", "bookName":"もいもい","author": "市原　淳"],
         ["bookArt": "searchStar", "bookName":"星を探しに","author": "しもかわら　ゆみ"],
         ["bookArt": "rabit", "bookName":"ビロードのうさぎ","author": "マージェリィ・W・ビアンコ"],
+        ["bookArt": "rabit", "bookName":"ビロードのうさぎ","author": "マージェリィ・W・ビアンコ"],
+        ["bookArt": "rabit", "bookName":"ビロードのうさぎ","author": "マージェリィ・W・ビアンコ"],
+        ["bookArt": "rabit", "bookName":"ビロードのうさぎ","author": "マージェリィ・W・ビアンコ"],
         ["bookArt": "rabit", "bookName":"ビロードのうさぎ","author": "マージェリィ・W・ビアンコ"]]
     //検索結果をおく配列
     var searchResult = [[String:String]]()
 
-
    override func viewDidLoad() {
         super.viewDidLoad()
-    
-        
+            
         // Do any additional setup after loading the view.
         //ナビゲーションアイテムに画像を設定する。
         self.navigationItem.titleView = UIImageView(image: UIImage(named: "titlelogo"))
@@ -47,11 +48,13 @@ class ListViewController: UIViewController, UISearchBarDelegate, UITableViewDele
         //検索結果配列にデータをコピーする。
         searchResult = bookInfoArray
     
+        //次のページの戻るボタンの指定
         let backBarButtonItem = UIBarButtonItem()
         backBarButtonItem.title = "戻る"
         self.navigationItem.backBarButtonItem = backBarButtonItem
     }
-        
+    
+//tableViewの設定
     //Table Viewのセルの数を指定
     func tableView(_ table: UITableView,
                    numberOfRowsInSection section: Int) -> Int {

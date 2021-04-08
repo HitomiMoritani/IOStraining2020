@@ -19,18 +19,17 @@ class ViewController: UIViewController {
         //textViewを編集不可にする
         self.ruleText.isEditable = false;
         
-        // 枠のカラー
+        // 枠線のカラー・幅を指定
         ruleText.layer.borderColor = UIColor.gray.cgColor
-        
-        // 枠の幅
         ruleText.layer.borderWidth = 1.0
     }
+    
     @IBAction func tapAcceptButton(_ sender: Any) {
-        //まずは、違うstororyboardであることをここで定義します
+        //まずは、違うstororyboardであることをここで定義
         let anotherStoryboard: UIStoryboard = UIStoryboard(name: "List", bundle: nil)
         //どのviewかを指定
         let anotherViewController: UIViewController = anotherStoryboard.instantiateViewController(withIdentifier: "List")
-        //画面遷移が実行
+        //画面遷移を実行
         self.navigationController?.pushViewController(anotherViewController, animated: true)
         
     }
