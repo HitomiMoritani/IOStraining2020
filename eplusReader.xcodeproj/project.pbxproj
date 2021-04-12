@@ -12,6 +12,7 @@
 		22426A49261C457B0008AD01 /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22426A48261C457B0008AD01 /* BookCell.swift */; };
 		2243593A261D67170033D887 /* LoginPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22435939261D67170033D887 /* LoginPage.storyboard */; };
 		22435942261D6CFE0033D887 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22435941261D6CFE0033D887 /* LoginViewController.swift */; };
+		2268DBE8261FE5ED00ED2857 /* BookInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2268DBE7261FE5ED00ED2857 /* BookInfo.swift */; };
 		2291DDF5261581460055FE03 /* List.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2291DDF4261581460055FE03 /* List.storyboard */; };
 		2291DE0226159C310055FE03 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2291DE0126159C310055FE03 /* ListViewController.swift */; };
 		22D99ED62611F95900926B30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D99ED52611F95900926B30 /* AppDelegate.swift */; };
@@ -47,6 +48,7 @@
 		22426A48261C457B0008AD01 /* BookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
 		22435939261D67170033D887 /* LoginPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginPage.storyboard; sourceTree = "<group>"; };
 		22435941261D6CFE0033D887 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2268DBE7261FE5ED00ED2857 /* BookInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookInfo.swift; sourceTree = "<group>"; };
 		2291DDF4261581460055FE03 /* List.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = List.storyboard; sourceTree = "<group>"; };
 		2291DE0126159C310055FE03 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		22D99ED22611F95900926B30 /* eplusReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eplusReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +120,7 @@
 				22D99EDB2611F95900926B30 /* Main.storyboard */,
 				22D99ED92611F95900926B30 /* ViewController.swift */,
 				2291DDF4261581460055FE03 /* List.storyboard */,
+				2268DBE7261FE5ED00ED2857 /* BookInfo.swift */,
 				22426A48261C457B0008AD01 /* BookCell.swift */,
 				2291DE0126159C310055FE03 /* ListViewController.swift */,
 				222ADFC22616CFAD00DD4C54 /* ListDetails.storyboard */,
@@ -282,6 +285,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2268DBE8261FE5ED00ED2857 /* BookInfo.swift in Sources */,
 				22435942261D6CFE0033D887 /* LoginViewController.swift in Sources */,
 				22426A49261C457B0008AD01 /* BookCell.swift in Sources */,
 				222ADFC82616CFF800DD4C54 /* ListDetails.swift in Sources */,

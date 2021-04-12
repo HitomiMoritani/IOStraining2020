@@ -28,10 +28,10 @@
                         <viewLayoutGuide key="safeArea" id="zQg-Jd-kjF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="zQg-Jd-kjF" firstAttribute="trailing" secondItem="hJ4-Gb-5r7" secondAttribute="trailing" id="5km-xC-Acm"/>
-                            <constraint firstItem="zQg-Jd-kjF" firstAttribute="bottom" secondItem="hJ4-Gb-5r7" secondAttribute="bottom" id="C3l-3h-Cg1"/>
-                            <constraint firstItem="hJ4-Gb-5r7" firstAttribute="top" secondItem="zQg-Jd-kjF" secondAttribute="top" id="G99-a5-CyV"/>
-                            <constraint firstItem="hJ4-Gb-5r7" firstAttribute="leading" secondItem="zQg-Jd-kjF" secondAttribute="leading" id="cmf-we-wcY"/>
+                            <constraint firstItem="zQg-Jd-kjF" firstAttribute="trailing" secondItem="hJ4-Gb-5r7" secondAttribute="trailing" id="MPR-GE-hFj"/>
+                            <constraint firstItem="hJ4-Gb-5r7" firstAttribute="bottom" secondItem="zQg-Jd-kjF" secondAttribute="bottom" id="Szg-yc-ZA4"/>
+                            <constraint firstItem="hJ4-Gb-5r7" firstAttribute="leading" secondItem="zQg-Jd-kjF" secondAttribute="leading" id="daw-mT-2hw"/>
+                            <constraint firstItem="hJ4-Gb-5r7" firstAttribute="top" secondItem="zQg-Jd-kjF" secondAttribute="top" id="xyw-a5-PcN"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="お知らせタイトル" id="pJO-83-tF0"/>

@@ -31,7 +31,6 @@ class ViewController: UIViewController {
         let anotherViewController: UIViewController = anotherStoryboard.instantiateViewController(withIdentifier: "List")
         //画面遷移を実行
         self.navigationController?.pushViewController(anotherViewController, animated: true)
-        
     }
 }
 

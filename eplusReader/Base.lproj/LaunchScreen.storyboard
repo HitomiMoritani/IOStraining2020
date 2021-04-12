@@ -16,15 +16,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="logo2" translatesAutoresizingMaskIntoConstraints="NO" id="U1q-hV-q1W">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="applogo" translatesAutoresizingMaskIntoConstraints="NO" id="NPC-QI-1mP">
                                 <rect key="frame" x="99" y="254" width="216" height="228"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="U1q-hV-q1W" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="cfQ-2Z-wbU"/>
-                            <constraint firstItem="U1q-hV-q1W" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="zCZ-3J-2el"/>
+                            <constraint firstItem="NPC-QI-1mP" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Upv-wk-qXf"/>
+                            <constraint firstItem="NPC-QI-1mP" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="d2B-YT-S7Q"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -34,7 +34,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo2" width="216" height="228"/>
+        <image name="applogo" width="216" height="228"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
