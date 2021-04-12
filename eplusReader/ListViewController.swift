@@ -96,7 +96,6 @@ class ListViewController: UIViewController, UISearchBarDelegate, UITableViewDele
         view.endEditing(true)
     }
     
-
 //画面遷移
     @IBAction func moveLoginPage(_ sender: Any) {
         //まずは、違うstororyboardであることをここで定義します
