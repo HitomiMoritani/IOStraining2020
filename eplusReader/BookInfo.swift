@@ -9,14 +9,16 @@ import Foundation
 
 class BookInfo {
     
-    var bookCoverImageView: String?
-    var bookTitleLabel: String?
-    var authorLabel: String?
+    var bookImage: String?
+    var bookTitle: String?
+    var author: String?
+    var url: String?
     
-    init(bookCover:String, bookTitle:String, author:String) {
-        self.bookTitleLabel = bookTitle
-        self.bookCoverImageView = bookCover
-        self.authorLabel = author
+    init(bookCover: String, bookTitle: String, author: String, url: String) {
+        self.bookTitle = bookTitle
+        self.bookImage = bookCover
+        self.author = author
+        self.url = url
     }
 }
 

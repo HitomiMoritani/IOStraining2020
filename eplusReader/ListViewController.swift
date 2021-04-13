@@ -13,16 +13,17 @@ class ListViewController: UIViewController, UISearchBarDelegate, UITableViewDele
     @IBOutlet weak var tableView: UITableView!
     
     //リストに表示する本の情報
-    let bookInfo1 = BookInfo(bookCover: "rabit", bookTitle: "ビロードのうさぎ", author: "マージェリィ・W・ビアンコ")
-    let bookInfo2 = BookInfo(bookCover: "gurigura", bookTitle: "ぐりとぐら", author: "なかがわ　りえこ")
-    let bookInfo3 = BookInfo(bookCover: "moimoi", bookTitle: "もいもい", author: "市原　淳")
-    let bookInfo4 = BookInfo(bookCover: "searchStar", bookTitle: "星を探しに", author: "しもかわら　ゆみ")
-    let bookInfo5 = BookInfo(bookCover: "rabit", bookTitle: "ビロードのうさぎ", author: "マージェリィ・W・ビアンコ")
-    let bookInfo6 = BookInfo(bookCover: "rabit", bookTitle: "ビロードのうさぎ", author: "マージェリィ・W・ビアンコ")
-    let bookInfo7 = BookInfo(bookCover: "rabit", bookTitle: "ビロードのうさぎ", author: "マージェリィ・W・ビアンコ")
-    let bookInfo8 = BookInfo(bookCover: "rabit", bookTitle: "ビロードのうさぎ", author: "マージェリィ・W・ビアンコ")
-    let bookInfo9 = BookInfo(bookCover: "rabit", bookTitle: "ビロードのうさぎ", author: "マージェリィ・W・ビアンコ")
-    let bookInfo10 = BookInfo(bookCover: "rabit", bookTitle: "ビロードのうさぎ", author: "マージェリィ・W・ビアンコ")
+    let bookInfo1 = BookInfo(bookCover: "rabit", bookTitle: "ビロードのうさぎ", author: "マージェリィ・W・ビアンコ", url: "hhttps://books.rakuten.co.jp/rb/4314767/?l-id=search-c-item-text-01")
+    let bookInfo2 = BookInfo(bookCover: "gurigura", bookTitle: "ぐりとぐら", author: "なかがわ　りえこ", url:"https://books.rakuten.co.jp")
+    let bookInfo3 = BookInfo(bookCover: "moimoi", bookTitle: "もいもい", author: "市原　淳", url: "https://www.amazon.co.jp/もいもい-あかちゃん学絵本-市原-淳/dp/4799321102/ref=sr_1_11?__mk_ja_JP=カタカナ&dchild=1&keywords=うさぎ+絵本&qid=1617676508&s=books&sr=1-11")
+    let bookInfo4 = BookInfo(bookCover: "searchStar", bookTitle: "星を探しに", author: "しもかわら　ゆみ", url: "https://www.amazon.co.jp/ほしをさがしに-講談社の創作絵本-しもかわら-ゆみ/dp/4061333402/ref=sr_1_13?__mk_ja_JP=カタカナ&dchild=1&keywords=うさぎ+絵本&qid=1617676508&s=books&sr=1-13")
+    let bookInfo5 = BookInfo(bookCover: "rabit", bookTitle: "ビロードのうさぎ", author: "マージェリィ・W・ビアンコ", url: "https://www.amazon.co.jp/ビロードのうさぎ-マージェリィ・W-ビアンコ/dp/4893094084/ref=sr_1_6?__mk_ja_JP=カタカナ&dchild=1&keywords=うさぎ+絵本&qid=1617676508&s=books&sr=1-6")
+    let bookInfo6 = BookInfo(bookCover: "rabit", bookTitle: "ビロードのうさぎ", author: "マージェリィ・W・ビアンコ", url: "https://www.amazon.co.jp/ビロードのうさぎ-マージェリィ・W-ビアンコ/dp/4893094084/ref=sr_1_6?__mk_ja_JP=カタカナ&dchild=1&keywords=うさぎ+絵本&qid=1617676508&s=books&sr=1-6")
+    let bookInfo7 = BookInfo(bookCover: "rabit", bookTitle: "ビロードのうさぎ", author: "マージェリィ・W・ビアンコ", url: "https://www.amazon.co.jp/ビロードのうさぎ-マージェリィ・W-ビアンコ/dp/4893094084/ref=sr_1_6?__mk_ja_JP=カタカナ&dchild=1&keywords=うさぎ+絵本&qid=1617676508&s=books&sr=1-6")
+    let bookInfo8 = BookInfo(bookCover: "rabit", bookTitle: "ビロードのうさぎ", author: "マージェリィ・W・ビアンコ", url: "https://www.amazon.co.jp/ビロードのうさぎ-マージェリィ・W-ビアンコ/dp/4893094084/ref=sr_1_6?__mk_ja_JP=カタカナ&dchild=1&keywords=うさぎ+絵本&qid=1617676508&s=books&sr=1-6")
+    let bookInfo9 = BookInfo(bookCover: "rabit", bookTitle: "ビロードのうさぎ", author: "マージェリィ・W・ビアンコ", url: "https://www.amazon.co.jp/ビロードのうさぎ-マージェリィ・W-ビアンコ/dp/4893094084/ref=sr_1_6?__mk_ja_JP=カタカナ&dchild=1&keywords=うさぎ+絵本&qid=1617676508&s=books&sr=1-6")
+    let bookInfo10 = BookInfo(bookCover: "rabit", bookTitle: "ビロードのうさぎ", author: "マージェリィ・W・ビアンコ", url: "https://www.google.co.jp/")
+
 
     //検索結果をおく配列
     var bookInfoArray = [BookInfo]()
@@ -64,9 +65,9 @@ class ListViewController: UIViewController, UISearchBarDelegate, UITableViewDele
         //セルクラスのインスタンスを生成
         let cell = table.dequeueReusableCell(withIdentifier: "bookInfoCell", for: indexPath) as! BookCell
         
-        cell.bookCover.image = UIImage(named: searchResult[indexPath.row].bookCoverImageView!)
-        cell.author.text = searchResult[indexPath.row].authorLabel!
-        cell.bookTitle.text = searchResult[indexPath.row].bookTitleLabel!
+        cell.bookCover.image = UIImage(named: searchResult[indexPath.row].bookImage!)
+        cell.author.text = searchResult[indexPath.row].author!
+        cell.bookTitle.text = searchResult[indexPath.row].bookTitle!
         return cell
     }
     //Cell の高さを１２０にする
@@ -84,7 +85,7 @@ class ListViewController: UIViewController, UISearchBarDelegate, UITableViewDele
         } else {
             //検索文字列を含むデータを検索結果配列に追加する。
             for data in bookInfoArray {
-                if data.bookTitleLabel!.contains(bookSearchBar.text!) || data.authorLabel!.contains(bookSearchBar.text!){
+                if data.bookTitle!.contains(bookSearchBar.text!) || data.author!.contains(bookSearchBar.text!){
                     searchResult.append(data)
                 }
             }
@@ -97,7 +98,7 @@ class ListViewController: UIViewController, UISearchBarDelegate, UITableViewDele
     
     //画面遷移
     @IBAction func moveLoginPage(_ sender: Any) {
-        //まずは、違うstororyboardであることをここで定義します
+        //まずは、どのstororyboardに移るかを定義
         let anotherStoryboard: UIStoryboard = UIStoryboard(name: "LoginPage", bundle: nil)
         //どのviewかを指定
         let anotherViewController: UIViewController = anotherStoryboard.instantiateViewController(withIdentifier: "LoginPage")
@@ -109,7 +110,10 @@ class ListViewController: UIViewController, UISearchBarDelegate, UITableViewDele
         //まずは、違うstororyboardであることをここで定義します
         let anotherStoryboard: UIStoryboard = UIStoryboard(name: "ListDetails", bundle: nil)
         //どのviewかを指定
-        let anotherViewController: UIViewController = anotherStoryboard.instantiateViewController(withIdentifier: "ListDetails")
+        let anotherViewController = anotherStoryboard.instantiateViewController(withIdentifier: "ListDetails") as! ListDetails
+        //検索結果の値渡し
+        anotherViewController.url = bookInfoArray[indexPath.row].url
+            
         //画面遷移が実行
         self.navigationController?.pushViewController(anotherViewController, animated: true)
           
