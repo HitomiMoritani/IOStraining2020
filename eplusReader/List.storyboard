@@ -69,7 +69,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="author" destination="dSa-Ky-3TX" id="6R4-di-KZd"/>
-                                            <outlet property="bookImage" destination="x1c-Lj-fzU" id="a16-tL-rib"/>
+                                            <outlet property="bookCover" destination="x1c-Lj-fzU" id="Z3O-jo-Vhx"/>
                                             <outlet property="bookTitle" destination="1ow-RJ-Xo6" id="JQi-wx-iEO"/>
                                         </connections>
                                     </tableViewCell>

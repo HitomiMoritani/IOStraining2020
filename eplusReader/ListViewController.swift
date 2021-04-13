@@ -12,7 +12,7 @@ class ListViewController: UIViewController, UISearchBarDelegate, UITableViewDele
     @IBOutlet weak var bookSearchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
-//リストに表示する本の情報
+    //リストに表示する本の情報
     let bookInfo1 = BookInfo(bookCover: "rabit", bookTitle: "ビロードのうさぎ", author: "マージェリィ・W・ビアンコ")
     let bookInfo2 = BookInfo(bookCover: "gurigura", bookTitle: "ぐりとぐら", author: "なかがわ　りえこ")
     let bookInfo3 = BookInfo(bookCover: "moimoi", bookTitle: "もいもい", author: "市原　淳")
@@ -30,7 +30,6 @@ class ListViewController: UIViewController, UISearchBarDelegate, UITableViewDele
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //Do any additional setup after loading the view.
         
         bookInfoArray = [bookInfo1, bookInfo2, bookInfo3, bookInfo4, bookInfo5, bookInfo6, bookInfo7, bookInfo8, bookInfo9, bookInfo10]
 
@@ -55,7 +54,7 @@ class ListViewController: UIViewController, UISearchBarDelegate, UITableViewDele
         self.navigationItem.backBarButtonItem = backBarButtonItem
     }
     
-//tableViewの設定
+    //tableViewの設定
     //Table Viewのセルの数を指定
     func tableView(_ table: UITableView, numberOfRowsInSection section: Int) -> Int {
         return searchResult.count
@@ -65,9 +64,9 @@ class ListViewController: UIViewController, UISearchBarDelegate, UITableViewDele
         //セルクラスのインスタンスを生成
         let cell = table.dequeueReusableCell(withIdentifier: "bookInfoCell", for: indexPath) as! BookCell
         
-        cell.bookImage.image = UIImage(named: searchResult[indexPath.row].bookCover!)
-        cell.author.text = searchResult[indexPath.row].author!
-        cell.bookTitle.text = searchResult[indexPath.row].bookTitle!
+        cell.bookCover.image = UIImage(named: searchResult[indexPath.row].bookCoverImageView!)
+        cell.author.text = searchResult[indexPath.row].authorLabel!
+        cell.bookTitle.text = searchResult[indexPath.row].bookTitleLabel!
         return cell
     }
     //Cell の高さを１２０にする
@@ -75,7 +74,7 @@ class ListViewController: UIViewController, UISearchBarDelegate, UITableViewDele
         return 140.0
     }
 
-//検索ボタンをクリック時
+    //検索ボタンをクリック時
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         //検索結果配列を空にする。
         searchResult.removeAll()
@@ -85,7 +84,7 @@ class ListViewController: UIViewController, UISearchBarDelegate, UITableViewDele
         } else {
             //検索文字列を含むデータを検索結果配列に追加する。
             for data in bookInfoArray {
-                if data.bookTitle!.contains(bookSearchBar.text!) || data.author!.contains(bookSearchBar.text!){
+                if data.bookTitleLabel!.contains(bookSearchBar.text!) || data.authorLabel!.contains(bookSearchBar.text!){
                     searchResult.append(data)
                 }
             }
@@ -96,7 +95,7 @@ class ListViewController: UIViewController, UISearchBarDelegate, UITableViewDele
         view.endEditing(true)
     }
     
-//画面遷移
+    //画面遷移
     @IBAction func moveLoginPage(_ sender: Any) {
         //まずは、違うstororyboardであることをここで定義します
         let anotherStoryboard: UIStoryboard = UIStoryboard(name: "LoginPage", bundle: nil)
