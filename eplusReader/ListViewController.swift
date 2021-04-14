@@ -13,15 +13,15 @@ class ListViewController: UIViewController, UISearchBarDelegate, UITableViewDele
     @IBOutlet weak var tableView: UITableView!
     
     //リストに表示する本の情報
-    let bookInfo1 = BookInfo(bookCover: "rabit", bookTitle: "ビロードのうさぎ", author: "マージェリィ・W・ビアンコ", url: "hhttps://books.rakuten.co.jp/rb/4314767/?l-id=search-c-item-text-01")
-    let bookInfo2 = BookInfo(bookCover: "gurigura", bookTitle: "ぐりとぐら", author: "なかがわ　りえこ", url:"https://books.rakuten.co.jp")
-    let bookInfo3 = BookInfo(bookCover: "moimoi", bookTitle: "もいもい", author: "市原　淳", url: "https://www.amazon.co.jp/もいもい-あかちゃん学絵本-市原-淳/dp/4799321102/ref=sr_1_11?__mk_ja_JP=カタカナ&dchild=1&keywords=うさぎ+絵本&qid=1617676508&s=books&sr=1-11")
-    let bookInfo4 = BookInfo(bookCover: "searchStar", bookTitle: "星を探しに", author: "しもかわら　ゆみ", url: "https://www.amazon.co.jp/ほしをさがしに-講談社の創作絵本-しもかわら-ゆみ/dp/4061333402/ref=sr_1_13?__mk_ja_JP=カタカナ&dchild=1&keywords=うさぎ+絵本&qid=1617676508&s=books&sr=1-13")
-    let bookInfo5 = BookInfo(bookCover: "rabit", bookTitle: "ビロードのうさぎ", author: "マージェリィ・W・ビアンコ", url: "https://www.amazon.co.jp/ビロードのうさぎ-マージェリィ・W-ビアンコ/dp/4893094084/ref=sr_1_6?__mk_ja_JP=カタカナ&dchild=1&keywords=うさぎ+絵本&qid=1617676508&s=books&sr=1-6")
-    let bookInfo6 = BookInfo(bookCover: "rabit", bookTitle: "ビロードのうさぎ", author: "マージェリィ・W・ビアンコ", url: "https://www.amazon.co.jp/ビロードのうさぎ-マージェリィ・W-ビアンコ/dp/4893094084/ref=sr_1_6?__mk_ja_JP=カタカナ&dchild=1&keywords=うさぎ+絵本&qid=1617676508&s=books&sr=1-6")
-    let bookInfo7 = BookInfo(bookCover: "rabit", bookTitle: "ビロードのうさぎ", author: "マージェリィ・W・ビアンコ", url: "https://www.amazon.co.jp/ビロードのうさぎ-マージェリィ・W-ビアンコ/dp/4893094084/ref=sr_1_6?__mk_ja_JP=カタカナ&dchild=1&keywords=うさぎ+絵本&qid=1617676508&s=books&sr=1-6")
-    let bookInfo8 = BookInfo(bookCover: "rabit", bookTitle: "ビロードのうさぎ", author: "マージェリィ・W・ビアンコ", url: "https://www.amazon.co.jp/ビロードのうさぎ-マージェリィ・W-ビアンコ/dp/4893094084/ref=sr_1_6?__mk_ja_JP=カタカナ&dchild=1&keywords=うさぎ+絵本&qid=1617676508&s=books&sr=1-6")
-    let bookInfo9 = BookInfo(bookCover: "rabit", bookTitle: "ビロードのうさぎ", author: "マージェリィ・W・ビアンコ", url: "https://www.amazon.co.jp/ビロードのうさぎ-マージェリィ・W-ビアンコ/dp/4893094084/ref=sr_1_6?__mk_ja_JP=カタカナ&dchild=1&keywords=うさぎ+絵本&qid=1617676508&s=books&sr=1-6")
+    let bookInfo1 = BookInfo(bookCover: "rabit", bookTitle: "ビロードのうさぎ", author: "マージェリィ・W・ビアンコ", url: "https://books.rakuten.co.jp/rb/4314767/?l-id=search-c-item-text-01")
+    let bookInfo2 = BookInfo(bookCover: "gurigura", bookTitle: "ぐりとぐら", author: "なかがわ　りえこ", url:"https://books.rakuten.co.jp/rb/119896/?l-id=search-c-item-text-19")
+    let bookInfo3 = BookInfo(bookCover: "moimoi", bookTitle: "もいもい", author: "市原　淳", url: "https://books.rakuten.co.jp/rb/15702462/?l-id=search-c-item-text-01")
+    let bookInfo4 = BookInfo(bookCover: "searchStar", bookTitle: "星を探しに", author: "しもかわら　ゆみ", url: "https://books.rakuten.co.jp/rb/15138729/?l-id=search-c-item-text-05")
+    let bookInfo5 = BookInfo(bookCover: "rabit", bookTitle: "ビロードのうさぎ", author: "マージェリィ・W・ビアンコ", url: "https://books.rakuten.co.jp/rb/4314767/?l-id=search-c-item-text-01")
+    let bookInfo6 = BookInfo(bookCover: "rabit", bookTitle: "ビロードのうさぎ", author: "マージェリィ・W・ビアンコ", url: "https://books.rakuten.co.jp/rb/4314767/?l-id=search-c-item-text-01")
+    let bookInfo7 = BookInfo(bookCover: "rabit", bookTitle: "ビロードのうさぎ", author: "マージェリィ・W・ビアンコ", url: "https://books.rakuten.co.jp/rb/4314767/?l-id=search-c-item-text-01")
+    let bookInfo8 = BookInfo(bookCover: "rabit", bookTitle: "ビロードのうさぎ", author: "マージェリィ・W・ビアンコ", url: "https://books.rakuten.co.jp/rb/4314767/?l-id=search-c-item-text-01")
+    let bookInfo9 = BookInfo(bookCover: "rabit", bookTitle: "ビロードのうさぎ", author: "マージェリィ・W・ビアンコ", url: "https://books.rakuten.co.jp/rb/4314767/?l-id=search-c-item-text-01")
     let bookInfo10 = BookInfo(bookCover: "rabit", bookTitle: "ビロードのうさぎ", author: "マージェリィ・W・ビアンコ", url: "https://www.google.co.jp/")
 
 
