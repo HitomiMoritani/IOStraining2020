@@ -15,9 +15,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dg1-w8-CAk">
-                                <rect key="frame" x="115" y="769" width="184" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dg1-w8-CAk">
+                                <rect key="frame" x="100" y="769" width="214" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="ログインする"/>
                                 <connections>
@@ -25,25 +24,25 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="loginPageIcon" translatesAutoresizingMaskIntoConstraints="NO" id="vui-Yg-SV0">
-                                <rect key="frame" x="44" y="118" width="326" height="223"/>
+                                <rect key="frame" x="44" y="88" width="326" height="223"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="メールアドレス" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wj0-q5-lvO">
-                                <rect key="frame" x="65" y="361" width="284" height="34"/>
+                                <rect key="frame" x="65" y="321" width="284" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="パスワード" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZOu-c8-0tB">
-                                <rect key="frame" x="65" y="459" width="284" height="34"/>
+                                <rect key="frame" x="65" y="414" width="284" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Aki-gp-wgR">
-                                <rect key="frame" x="65" y="503" width="284" height="34"/>
+                                <rect key="frame" x="65" y="458" width="284" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DE8-kz-EVH">
-                                <rect key="frame" x="65" y="405" width="284" height="34"/>
+                                <rect key="frame" x="65" y="365" width="284" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -51,20 +50,23 @@
                         <viewLayoutGuide key="safeArea" id="unJ-zK-F9D"/>
                         <color key="backgroundColor" red="0.94903236629999999" green="0.94899672270000002" blue="0.94902092220000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="Aki-gp-wgR" firstAttribute="top" secondItem="ZOu-c8-0tB" secondAttribute="bottom" constant="10" id="4wS-kx-tVR"/>
+                            <constraint firstItem="Dg1-w8-CAk" firstAttribute="leading" secondItem="unJ-zK-F9D" secondAttribute="leading" constant="100" id="5BY-Kx-ri5"/>
                             <constraint firstItem="unJ-zK-F9D" firstAttribute="trailing" secondItem="vui-Yg-SV0" secondAttribute="trailing" constant="44" id="7zJ-Dc-3zr"/>
+                            <constraint firstItem="Wj0-q5-lvO" firstAttribute="top" secondItem="vui-Yg-SV0" secondAttribute="bottom" constant="10" id="DLT-1t-74S"/>
+                            <constraint firstItem="vui-Yg-SV0" firstAttribute="top" secondItem="unJ-zK-F9D" secondAttribute="top" id="Gmd-kh-Q2i"/>
                             <constraint firstItem="unJ-zK-F9D" firstAttribute="trailing" secondItem="ZOu-c8-0tB" secondAttribute="trailing" constant="65" id="IGt-EP-1aa"/>
                             <constraint firstItem="Aki-gp-wgR" firstAttribute="leading" secondItem="unJ-zK-F9D" secondAttribute="leading" constant="65" id="IQY-HR-xvi"/>
-                            <constraint firstItem="DE8-kz-EVH" firstAttribute="top" secondItem="Wj0-q5-lvO" secondAttribute="bottom" constant="10" id="J7d-rc-ig3"/>
                             <constraint firstItem="Wj0-q5-lvO" firstAttribute="leading" secondItem="unJ-zK-F9D" secondAttribute="leading" constant="65" id="Kqp-wZ-Tfw"/>
-                            <constraint firstItem="vui-Yg-SV0" firstAttribute="top" secondItem="unJ-zK-F9D" secondAttribute="top" constant="30" id="Mx7-rD-jH3"/>
+                            <constraint firstItem="DE8-kz-EVH" firstAttribute="top" secondItem="Wj0-q5-lvO" secondAttribute="bottom" constant="10" id="MIf-Yf-9Pg"/>
+                            <constraint firstItem="ZOu-c8-0tB" firstAttribute="top" secondItem="DE8-kz-EVH" secondAttribute="bottom" constant="15" id="NA8-7f-vhx"/>
                             <constraint firstItem="unJ-zK-F9D" firstAttribute="trailing" secondItem="Aki-gp-wgR" secondAttribute="trailing" constant="65" id="UjV-ZT-Muz"/>
-                            <constraint firstItem="Aki-gp-wgR" firstAttribute="top" secondItem="ZOu-c8-0tB" secondAttribute="bottom" constant="10" id="cVm-5V-kj2"/>
-                            <constraint firstItem="Wj0-q5-lvO" firstAttribute="top" secondItem="vui-Yg-SV0" secondAttribute="bottom" constant="20" id="eM1-u2-xjc"/>
+                            <constraint firstItem="unJ-zK-F9D" firstAttribute="trailing" secondItem="Dg1-w8-CAk" secondAttribute="trailing" constant="100" id="a2p-0T-vH4"/>
                             <constraint firstItem="unJ-zK-F9D" firstAttribute="trailing" secondItem="Wj0-q5-lvO" secondAttribute="trailing" constant="65" id="fa5-QS-8Gk"/>
+                            <constraint firstItem="unJ-zK-F9D" firstAttribute="bottom" secondItem="Dg1-w8-CAk" secondAttribute="bottom" constant="45" id="g2y-9E-BuY"/>
                             <constraint firstItem="DE8-kz-EVH" firstAttribute="leading" secondItem="unJ-zK-F9D" secondAttribute="leading" constant="65" id="kgf-iW-LsP"/>
                             <constraint firstItem="vui-Yg-SV0" firstAttribute="leading" secondItem="unJ-zK-F9D" secondAttribute="leading" constant="44" id="mkh-F0-RMQ"/>
                             <constraint firstItem="unJ-zK-F9D" firstAttribute="trailing" secondItem="DE8-kz-EVH" secondAttribute="trailing" constant="65" id="pFh-HK-3pz"/>
-                            <constraint firstItem="ZOu-c8-0tB" firstAttribute="top" secondItem="DE8-kz-EVH" secondAttribute="bottom" constant="20" id="pKl-vq-jep"/>
                             <constraint firstItem="ZOu-c8-0tB" firstAttribute="leading" secondItem="unJ-zK-F9D" secondAttribute="leading" constant="65" id="uIK-Cb-DYh"/>
                         </constraints>
                     </view>

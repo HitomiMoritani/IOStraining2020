@@ -13,16 +13,16 @@ class ListViewController: UIViewController, UISearchBarDelegate, UITableViewDele
     @IBOutlet weak var tableView: UITableView!
     
     //リストに表示する本の情報
-    let bookInfo1 = BookInfo(bookCover: "rabit", bookTitle: "ビロードのうさぎ", author: "マージェリィ・W・ビアンコ", url: "https://books.rakuten.co.jp/rb/4314767/?l-id=search-c-item-text-01")
-    let bookInfo2 = BookInfo(bookCover: "gurigura", bookTitle: "ぐりとぐら", author: "なかがわ　りえこ", url:"https://books.rakuten.co.jp/rb/119896/?l-id=search-c-item-text-19")
-    let bookInfo3 = BookInfo(bookCover: "moimoi", bookTitle: "もいもい", author: "市原　淳", url: "https://books.rakuten.co.jp/rb/15702462/?l-id=search-c-item-text-01")
-    let bookInfo4 = BookInfo(bookCover: "searchStar", bookTitle: "星を探しに", author: "しもかわら　ゆみ", url: "https://books.rakuten.co.jp/rb/15138729/?l-id=search-c-item-text-05")
-    let bookInfo5 = BookInfo(bookCover: "rabit", bookTitle: "ビロードのうさぎ", author: "マージェリィ・W・ビアンコ", url: "https://books.rakuten.co.jp/rb/4314767/?l-id=search-c-item-text-01")
-    let bookInfo6 = BookInfo(bookCover: "rabit", bookTitle: "ビロードのうさぎ", author: "マージェリィ・W・ビアンコ", url: "https://books.rakuten.co.jp/rb/4314767/?l-id=search-c-item-text-01")
-    let bookInfo7 = BookInfo(bookCover: "rabit", bookTitle: "ビロードのうさぎ", author: "マージェリィ・W・ビアンコ", url: "https://books.rakuten.co.jp/rb/4314767/?l-id=search-c-item-text-01")
-    let bookInfo8 = BookInfo(bookCover: "rabit", bookTitle: "ビロードのうさぎ", author: "マージェリィ・W・ビアンコ", url: "https://books.rakuten.co.jp/rb/4314767/?l-id=search-c-item-text-01")
-    let bookInfo9 = BookInfo(bookCover: "rabit", bookTitle: "ビロードのうさぎ", author: "マージェリィ・W・ビアンコ", url: "https://books.rakuten.co.jp/rb/4314767/?l-id=search-c-item-text-01")
-    let bookInfo10 = BookInfo(bookCover: "rabit", bookTitle: "ビロードのうさぎ", author: "マージェリィ・W・ビアンコ", url: "https://www.google.co.jp/")
+    let bookInfo1 = BookInfo(bookCover: "rabit", bookTitle: "ビロードのうさぎ", author: "マージェリィ・W・ビアンコ", url: "https://www.amazon.co.jp/dp/4893094084/")
+    let bookInfo2 = BookInfo(bookCover: "gurigura", bookTitle: "ぐりとぐら", author: "なかがわ　りえこ", url:"https://www.amazon.co.jp/dp/4834000826/")
+    let bookInfo3 = BookInfo(bookCover: "moimoi", bookTitle: "もいもい", author: "市原　淳", url: "https://www.amazon.co.jp/dp/4799321102/")
+    let bookInfo4 = BookInfo(bookCover: "searchStar", bookTitle: "星を探しに", author: "しもかわら　ゆみ", url: "https://www.amazon.co.jp/dp/4061333402/")
+    let bookInfo5 = BookInfo(bookCover: "rabit", bookTitle: "ビロードのうさぎ", author: "マージェリィ・W・ビアンコ", url: "https://www.amazon.co.jp/dp/4893094084/")
+    let bookInfo6 = BookInfo(bookCover: "rabit", bookTitle: "ビロードのうさぎ", author: "マージェリィ・W・ビアンコ", url: "https://www.amazon.co.jp/dp/4893094084/")
+    let bookInfo7 = BookInfo(bookCover: "rabit", bookTitle: "ビロードのうさぎ", author: "マージェリィ・W・ビアンコ", url: "https://www.amazon.co.jp/dp/4893094084/")
+    let bookInfo8 = BookInfo(bookCover: "rabit", bookTitle: "ビロードのうさぎ", author: "マージェリィ・W・ビアンコ", url: "https://www.amazon.co.jp/dp/4893094084/")
+    let bookInfo9 = BookInfo(bookCover: "rabit", bookTitle: "ビロードのうさぎ", author: "マージェリィ・W・ビアンコ", url: "https://www.amazon.co.jp/dp/4893094084/")
+    let bookInfo10 = BookInfo(bookCover: "rabit", bookTitle: "ビロードのうさぎ", author: "マージェリィ・W・ビアンコ", url: "https://www.amazon.co.jp/dp/4893094084/")
 
 
     //検索結果をおく配列
