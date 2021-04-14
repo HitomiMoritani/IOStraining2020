@@ -13,7 +13,6 @@ class ListDetails: UIViewController {
     @IBOutlet weak var webView: WKWebView!
     var url: String!
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -22,5 +21,4 @@ class ListDetails: UIViewController {
             webView.load(urlReq)
         }
     }
-
 }

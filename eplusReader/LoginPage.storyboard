@@ -20,7 +20,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="ログインする"/>
                                 <connections>
-                                    <action selector="moveList:" destination="FBd-p8-zaL" eventType="touchUpInside" id="Sq0-12-ICX"/>
+                                    <action selector="tapMoveListPage:" destination="FBd-p8-zaL" eventType="touchUpInside" id="Ykv-oS-G9n"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="loginPageIcon" translatesAutoresizingMaskIntoConstraints="NO" id="vui-Yg-SV0">
@@ -40,11 +40,17 @@
                                 <rect key="frame" x="65" y="458" width="284" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="inputMail:" destination="FBd-p8-zaL" eventType="editingDidEnd" id="yI1-St-2UL"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DE8-kz-EVH">
                                 <rect key="frame" x="65" y="365" width="284" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="inputMail:" destination="FBd-p8-zaL" eventType="editingChanged" id="KY1-3f-u9j"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="unJ-zK-F9D"/>
@@ -61,6 +67,7 @@
                             <constraint firstItem="DE8-kz-EVH" firstAttribute="top" secondItem="Wj0-q5-lvO" secondAttribute="bottom" constant="10" id="MIf-Yf-9Pg"/>
                             <constraint firstItem="ZOu-c8-0tB" firstAttribute="top" secondItem="DE8-kz-EVH" secondAttribute="bottom" constant="15" id="NA8-7f-vhx"/>
                             <constraint firstItem="unJ-zK-F9D" firstAttribute="trailing" secondItem="Aki-gp-wgR" secondAttribute="trailing" constant="65" id="UjV-ZT-Muz"/>
+                            <constraint firstItem="unJ-zK-F9D" firstAttribute="trailing" secondItem="Dg1-w8-CAk" secondAttribute="trailing" constant="100" id="VTc-RO-N0x"/>
                             <constraint firstItem="unJ-zK-F9D" firstAttribute="trailing" secondItem="Dg1-w8-CAk" secondAttribute="trailing" constant="100" id="a2p-0T-vH4"/>
                             <constraint firstItem="unJ-zK-F9D" firstAttribute="trailing" secondItem="Wj0-q5-lvO" secondAttribute="trailing" constant="65" id="fa5-QS-8Gk"/>
                             <constraint firstItem="unJ-zK-F9D" firstAttribute="bottom" secondItem="Dg1-w8-CAk" secondAttribute="bottom" constant="45" id="g2y-9E-BuY"/>
@@ -72,6 +79,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="ログイン" id="3LL-BZ-VIi"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="inputMail" destination="DE8-kz-EVH" id="L4c-Sx-nwb"/>
+                        <outlet property="inputPassWord" destination="Aki-gp-wgR" id="lvL-vp-W1E"/>
+                        <outlet property="loginButton" destination="Dg1-w8-CAk" id="Db8-Bm-kh9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rAf-IX-c8R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
