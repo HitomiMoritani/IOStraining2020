@@ -34,7 +34,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    @IBAction func inputMail(_ sender: Any) {
+    @IBAction func inputWord(_ sender: Any) {
         if inputMail.text == "" || inputPassWord.text == "" {
                loginButton.isEnabled = false
         } else {

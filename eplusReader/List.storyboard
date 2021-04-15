@@ -92,7 +92,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="title" id="i66-eI-58s">
-                        <barButtonItem key="leftBarButtonItem" title="menu" id="4ir-0y-Soz"/>
                         <barButtonItem key="rightBarButtonItem" title="login" id="XP6-KF-MHr">
                             <connections>
                                 <action selector="moveLoginPage:" destination="lex-B7-JOe" id="WJ3-f2-NIY"/>
