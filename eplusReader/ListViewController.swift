@@ -8,6 +8,11 @@
 import UIKit
 class ListViewController: UIViewController, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource {
     
+    //キーボード以外をタップしたらキーボードをしまう。
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+            self.view.endEditing(true)
+        }
+    
     //検索バー関連
     @IBOutlet weak var bookSearchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
@@ -33,6 +38,8 @@ class ListViewController: UIViewController, UISearchBarDelegate, UITableViewDele
         super.viewDidLoad()
         
         bookInfoArray = [bookInfo1, bookInfo2, bookInfo3, bookInfo4, bookInfo5, bookInfo6, bookInfo7, bookInfo8, bookInfo9, bookInfo10]
+        
+        
 
 
         self.navigationItem.titleView = UIImageView(image: UIImage(named: "titlelogo"))
@@ -93,7 +100,8 @@ class ListViewController: UIViewController, UISearchBarDelegate, UITableViewDele
         //テーブルを再読み込みする。
         tableView.reloadData()
         //キーボードを閉じる
-        view.endEditing(true)
+        //view.endEditing(true)
+        
     }
     
     //画面遷移

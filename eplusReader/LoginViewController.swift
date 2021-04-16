@@ -12,16 +12,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var inputMail: UITextField!
     @IBOutlet weak var inputPassWord: UITextField!
     @IBOutlet weak var loginButton: UIButton!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         //最初にボタンを無効にする
         loginButton.isEnabled = false
-        
         //デリゲートの作成
         inputMail.delegate = self
         inputPassWord.delegate = self
+        //入力された文字を非表示モードにする
     }
     
     override func didReceiveMemoryWarning() {
@@ -34,6 +33,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
+    //メールアドレス・パスワードの入力の判定
     @IBAction func inputWord(_ sender: Any) {
         if inputMail.text == "" || inputPassWord.text == "" {
                loginButton.isEnabled = false
@@ -42,8 +42,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    @IBAction func tapMoveListPage(_ sender: Any) {
+    //キーボード以外をタップしたらキーボードをしまう。
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+            self.view.endEditing(true)
+    }
 
+    @IBAction func tapMoveListPage(_ sender: Any) {
     //どのStoryBoardかを指定
         let anotherStoryboard: UIStoryboard = UIStoryboard(name: "List", bundle: nil)
         //どのviewかを指定
