@@ -20,7 +20,37 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         //デリゲートの作成
         inputMail.delegate = self
         inputPassWord.delegate = self
-        //入力された文字を非表示モードにする
+    }
+    
+    //Notification発行
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        configureObserver()
+    }
+    
+    func configureObserver() {
+        let notification = NotificationCenter.default
+        notification.addObserver(self, selector: #selector(keyboardWillShow(_: )), name: UIResponder.keyboardWillShowNotification, object: nil)
+        notification.addObserver(self, selector: #selector(keyboardWillHide(_: )), name: UIResponder.keyboardWillHideNotification, object: nil)
+        print("Notificationを発行")
+    }
+    
+    //キーボードが表示時に画面をずらす。
+    @objc func keyboardWillShow(_ notification: Notification?) {
+        guard let rect = (notification?.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue,
+            let duration = notification?.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? TimeInterval else { return }
+            UIView.animate(withDuration: duration) {
+            let transform = CGAffineTransform(translationX: 0, y: -(rect.size.height))
+            self.view.transform = transform
+        }
+    }
+
+    //キーボードが降りたら画面を戻す
+    @objc func keyboardWillHide(_ notification: Notification?) {
+        guard let duration = notification?.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? TimeInterval else { return }
+        UIView.animate(withDuration: duration) {
+            self.view.transform = CGAffineTransform.identity
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -42,7 +72,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    //キーボード以外をタップしたらキーボードをしまう。
+    //キーボード以外をタップしたらキーボードをしまう
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
             self.view.endEditing(true)
     }

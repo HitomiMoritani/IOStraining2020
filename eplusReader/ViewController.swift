@@ -24,6 +24,8 @@ class ViewController: UIViewController {
         ruleText.layer.borderWidth = 1.0
     }
     
+
+    
     @IBAction func tapAcceptButton(_ sender: Any) {
         //まずは、違うstororyboardであることをここで定義
         let anotherStoryboard: UIStoryboard = UIStoryboard(name: "List", bundle: nil)

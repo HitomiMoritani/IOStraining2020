@@ -39,7 +39,6 @@ class ListViewController: UIViewController, UISearchBarDelegate, UITableViewDele
         
         bookInfoArray = [bookInfo1, bookInfo2, bookInfo3, bookInfo4, bookInfo5, bookInfo6, bookInfo7, bookInfo8, bookInfo9, bookInfo10]
         
-        
 
 
         self.navigationItem.titleView = UIImageView(image: UIImage(named: "titlelogo"))
@@ -100,7 +99,7 @@ class ListViewController: UIViewController, UISearchBarDelegate, UITableViewDele
         //テーブルを再読み込みする。
         tableView.reloadData()
         //キーボードを閉じる
-        //view.endEditing(true)
+        view.endEditing(true)
         
     }
     
@@ -124,6 +123,7 @@ class ListViewController: UIViewController, UISearchBarDelegate, UITableViewDele
             
         //画面遷移が実行
         self.navigationController?.pushViewController(anotherViewController, animated: true)
+        view.endEditing(true)
           
     }
 }
