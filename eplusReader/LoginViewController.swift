@@ -66,7 +66,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     //メールアドレス・パスワードの入力の判定
     @IBAction func inputWord(_ sender: Any) {
         if inputMail.text == "" || inputPassWord.text == "" {
-               loginButton.isEnabled = false
+            loginButton.isEnabled = false
         } else {
                loginButton.isEnabled = true
         }
@@ -74,7 +74,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     //キーボード以外をタップしたらキーボードをしまう
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-            self.view.endEditing(true)
+        self.view.endEditing(true)
     }
 
     @IBAction func tapMoveListPage(_ sender: Any) {

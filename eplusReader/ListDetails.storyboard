@@ -30,7 +30,7 @@
                                 <items>
                                     <barButtonItem title="&lt;" width="81.333333333333343" id="s8V-2a-Hdq">
                                         <connections>
-                                            <action selector="backWebView:" destination="Mnv-1K-hkR" id="ffu-9q-nAT"/>
+                                            <action selector="backButton:" destination="Mnv-1K-hkR" id="5nU-tq-H86"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Yfy-Gm-EOh"/>
@@ -42,7 +42,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="naZ-wi-TC3"/>
                                     <barButtonItem title="&gt;" width="87.333333333333314" id="vdq-Rf-Mtz">
                                         <connections>
-                                            <action selector="moveOnWebView:" destination="Mnv-1K-hkR" id="BAR-rR-gEY"/>
+                                            <action selector="forwordButton:" destination="Mnv-1K-hkR" id="aWz-Ea-cGd"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -60,8 +60,8 @@
                     <navigationItem key="navigationItem" title="本の情報" id="pJO-83-tF0"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="backWebView" destination="s8V-2a-Hdq" id="Wqx-dM-i3F"/>
-                        <outlet property="moveOnWebView" destination="vdq-Rf-Mtz" id="LUn-AB-bih"/>
+                        <outlet property="backButton" destination="s8V-2a-Hdq" id="ok2-E2-ngn"/>
+                        <outlet property="forwordButton" destination="vdq-Rf-Mtz" id="ACY-fy-qtz"/>
                         <outlet property="reload" destination="2EH-C3-UQA" id="p9E-vH-YZ0"/>
                         <outlet property="webView" destination="hJ4-Gb-5r7" id="5bw-h6-ZUZ"/>
                     </connections>

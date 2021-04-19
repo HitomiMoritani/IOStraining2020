@@ -8,11 +8,6 @@
 import UIKit
 class ListViewController: UIViewController, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource {
     
-    //キーボード以外をタップしたらキーボードをしまう。
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-            self.view.endEditing(true)
-        }
-    
     //検索バー関連
     @IBOutlet weak var bookSearchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
@@ -33,6 +28,11 @@ class ListViewController: UIViewController, UISearchBarDelegate, UITableViewDele
     //検索結果をおく配列
     var bookInfoArray = [BookInfo]()
     var searchResult = [BookInfo]()
+    
+    //キーボード以外をタップしたらキーボードをしまう。
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+            self.view.endEditing(true)
+        }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,6 +58,7 @@ class ListViewController: UIViewController, UISearchBarDelegate, UITableViewDele
         //次のページの戻るボタンの指定
         let backBarButtonItem = UIBarButtonItem()
         backBarButtonItem.title = "戻る"
+        backBarButtonItem.title = "Back"
         self.navigationItem.backBarButtonItem = backBarButtonItem
     }
     
