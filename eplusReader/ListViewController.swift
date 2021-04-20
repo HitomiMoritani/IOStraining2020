@@ -57,7 +57,6 @@ class ListViewController: UIViewController, UISearchBarDelegate, UITableViewDele
     
         //次のページの戻るボタンの指定
         let backBarButtonItem = UIBarButtonItem()
-        backBarButtonItem.title = "戻る"
         backBarButtonItem.title = "Back"
         self.navigationItem.backBarButtonItem = backBarButtonItem
     }

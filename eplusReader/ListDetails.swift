@@ -21,12 +21,9 @@ class ListDetails: UIViewController, WKUIDelegate, WKNavigationDelegate, UIWebVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //画面中央に置く
         //インジゲーターのスタイル設定
         activityIndicatorView.center = view.center
-        //スタイル設定。他に、gray,whiteが選べる
         activityIndicatorView.style = UIActivityIndicatorView.Style.large
-        //色設定
         activityIndicatorView.color = .gray
         //viewに追加する
         self.view.addSubview(activityIndicatorView)
@@ -35,9 +32,6 @@ class ListDetails: UIViewController, WKUIDelegate, WKNavigationDelegate, UIWebVi
 
         webView.navigationDelegate = self
         
-        
-        activityIndicatorView.hidesWhenStopped = true //ローディング止まった時、indicator消す(隠す)
-        if activityIndicatorView.isAnimating { //ローディングしてるか確認
         activityIndicatorView.hidesWhenStopped = true
         if activityIndicatorView.isAnimating {
             print("ロード中")
@@ -73,7 +67,6 @@ class ListDetails: UIViewController, WKUIDelegate, WKNavigationDelegate, UIWebVi
         self.activityIndicatorView.stopAnimating()
     }
     
-    @IBAction func backWebView(_ sender: Any) {
     //戻るボタンの実装
     @IBAction func backButton(_ sender: Any) {
         if (self.webView.canGoBack) {
@@ -81,7 +74,6 @@ class ListDetails: UIViewController, WKUIDelegate, WKNavigationDelegate, UIWebVi
         }
     }
     
-    @IBAction func moveOnWebView(_ sender: Any) {
     //進むボタンの実装
     @IBAction func forwordButton(_ sender: Any) {
         if (self.webView.canGoForward) {
