@@ -13,7 +13,7 @@ class ListDetails: UIViewController, WKUIDelegate, WKNavigationDelegate, UIWebVi
     @IBOutlet weak var webView: WKWebView!
     @IBOutlet weak var forwordButton: UIBarButtonItem!
     @IBOutlet weak var backButton: UIBarButtonItem!
-    @IBOutlet weak var reload: UIBarButtonItem!
+    @IBOutlet weak var refreshWebButton: UIBarButtonItem!
     
     var url: String!
     var activityIndicatorView = UIActivityIndicatorView()
@@ -56,7 +56,7 @@ class ListDetails: UIViewController, WKUIDelegate, WKNavigationDelegate, UIWebVi
         observations.append(webView.observe(\.canGoForward, options: .new){ _, change in
             if let value = change.newValue {
                 DispatchQueue.main.async {
-                self.forwordButton.isEnabled = value
+                    self.forwordButton.isEnabled = value
                 }
             }
         })
@@ -70,14 +70,14 @@ class ListDetails: UIViewController, WKUIDelegate, WKNavigationDelegate, UIWebVi
     //戻るボタンの実装
     @IBAction func backButton(_ sender: Any) {
         if (self.webView.canGoBack) {
-        self.webView.goBack()
+            self.webView.goBack()
         }
     }
     
     //進むボタンの実装
     @IBAction func forwordButton(_ sender: Any) {
         if (self.webView.canGoForward) {
-        self.webView.goForward()
+            self.webView.goForward()
         }
     }
     

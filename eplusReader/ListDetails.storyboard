@@ -36,7 +36,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Yfy-Gm-EOh"/>
                                     <barButtonItem title="再読み込み" id="2EH-C3-UQA">
                                         <connections>
-                                            <action selector="refreshWebView:" destination="Mnv-1K-hkR" id="xMB-Nj-PaB"/>
+                                            <action selector="refreshWebView:" destination="Mnv-1K-hkR" id="vbk-mA-4dy"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="naZ-wi-TC3"/>
@@ -62,7 +62,7 @@
                     <connections>
                         <outlet property="backButton" destination="s8V-2a-Hdq" id="ok2-E2-ngn"/>
                         <outlet property="forwordButton" destination="vdq-Rf-Mtz" id="ACY-fy-qtz"/>
-                        <outlet property="reload" destination="2EH-C3-UQA" id="p9E-vH-YZ0"/>
+                        <outlet property="refreshWebButton" destination="2EH-C3-UQA" id="uNe-26-XXW"/>
                         <outlet property="webView" destination="hJ4-Gb-5r7" id="5bw-h6-ZUZ"/>
                     </connections>
                 </viewController>

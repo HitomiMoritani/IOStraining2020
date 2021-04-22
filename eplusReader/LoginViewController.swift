@@ -35,32 +35,26 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         print("Notificationを発行")
     }
     
-    //キーボードが表示時に画面をずらす。
+    //キーボード表示時に画面をずらす。
     @objc func keyboardWillShow(_ notification: Notification?) {
         guard let rect = (notification?.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue,
             let duration = notification?.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? TimeInterval else { return }
             UIView.animate(withDuration: duration) {
-            let transform = CGAffineTransform(translationX: 0, y: -(rect.size.height))
-            self.view.transform = transform
-        }
+                let transform = CGAffineTransform(translationX: 0, y: -(rect.size.height))
+                self.view.transform = transform
+            }
     }
 
     //キーボードが降りたら画面を戻す
     @objc func keyboardWillHide(_ notification: Notification?) {
         guard let duration = notification?.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? TimeInterval else { return }
-        UIView.animate(withDuration: duration) {
-            self.view.transform = CGAffineTransform.identity
-        }
+            UIView.animate(withDuration: duration) {
+                self.view.transform = CGAffineTransform.identity
+            }
     }
     
     override func didReceiveMemoryWarning() {
-            super.didReceiveMemoryWarning()
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        // キーボードを閉じる
-        textField.resignFirstResponder()
-        return true
+        super.didReceiveMemoryWarning()
     }
     
     //メールアドレス・パスワードの入力の判定
@@ -68,7 +62,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         if inputMail.text == "" || inputPassWord.text == "" {
             loginButton.isEnabled = false
         } else {
-               loginButton.isEnabled = true
+            loginButton.isEnabled = true
         }
     }
     
@@ -76,13 +70,39 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
+    
+    // キーボードを閉じる
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 
     @IBAction func tapMoveListPage(_ sender: Any) {
-    //どのStoryBoardかを指定
+        //メールアドレス・パスワードをUDに保存
+        let udMail = UserDefaults.standard
+        let udPassWord = UserDefaults.standard
+        udMail.set(inputMail.text, forKey: "mailAdress")
+        udPassWord.set(inputPassWord.text, forKey: "passWord")
+        //どのStoryBoardかを指定
         let anotherStoryboard: UIStoryboard = UIStoryboard(name: "List", bundle: nil)
         //どのviewかを指定
         let anotherViewController: UIViewController = anotherStoryboard.instantiateViewController(withIdentifier: "List")
         //画面遷移が実行
         self.navigationController?.pushViewController(anotherViewController, animated: true)
+        
+        //アラート生成
+        //UIAlertControllerのスタイルがalert
+        let alert: UIAlertController = UIAlertController(title: "SUCCESS!", message:  "ログインしました", preferredStyle:  UIAlertController.Style.alert)
+        // 確定ボタンの処理
+        let confirmAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler:{
+            // 確定ボタンが押された時の処理をクロージャ実装する
+            (action: UIAlertAction!) -> Void in
+            print("ログインしました")
+        })
+        
+        //UIAlertControllerにOKボタンをActionを追加
+        alert.addAction(confirmAction)
+        //実際にAlertを表示する
+        present(alert, animated: true, completion: nil)
     }
 }

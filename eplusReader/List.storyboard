@@ -91,13 +91,7 @@
                             <constraint firstItem="HuH-Ur-dyG" firstAttribute="top" secondItem="Cu9-OT-iFE" secondAttribute="top" constant="10" id="xBc-mH-LZh"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="title" id="i66-eI-58s">
-                        <barButtonItem key="rightBarButtonItem" title="login" id="XP6-KF-MHr">
-                            <connections>
-                                <action selector="moveLoginPage:" destination="lex-B7-JOe" id="WJ3-f2-NIY"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="title" id="i66-eI-58s"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="bookSearchBar" destination="HuH-Ur-dyG" id="7EI-FB-5HC"/>
