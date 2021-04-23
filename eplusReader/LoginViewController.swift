@@ -12,7 +12,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var inputMail: UITextField!
     @IBOutlet weak var inputPassWord: UITextField!
     @IBOutlet weak var loginButton: UIButton!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //最初にボタンを無効にする
@@ -38,19 +38,19 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     //キーボード表示時に画面をずらす。
     @objc func keyboardWillShow(_ notification: Notification?) {
         guard let rect = (notification?.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue,
-            let duration = notification?.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? TimeInterval else { return }
-            UIView.animate(withDuration: duration) {
-                let transform = CGAffineTransform(translationX: 0, y: -(rect.size.height))
-                self.view.transform = transform
-            }
+              let duration = notification?.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? TimeInterval else { return }
+        UIView.animate(withDuration: duration) {
+            let transform = CGAffineTransform(translationX: 0, y: -(rect.size.height))
+            self.view.transform = transform
+        }
     }
-
+    
     //キーボードが降りたら画面を戻す
     @objc func keyboardWillHide(_ notification: Notification?) {
         guard let duration = notification?.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? TimeInterval else { return }
-            UIView.animate(withDuration: duration) {
-                self.view.transform = CGAffineTransform.identity
-            }
+        UIView.animate(withDuration: duration) {
+            self.view.transform = CGAffineTransform.identity
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -59,12 +59,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     //メールアドレス・パスワードの入力の判定
     @IBAction func inputWord(_ sender: Any) {
-        if inputMail.text == "" || inputPassWord.text == "" {
+        guard let mail = inputMail.text, let password = inputPassWord.text else {
             loginButton.isEnabled = false
-        } else {
-            loginButton.isEnabled = true
+            return
         }
+        loginButton.isEnabled = mail.isEmailAdressFormat() && password.isHalfwidthAlphanumeric()
     }
+    
     
     //キーボード以外をタップしたらキーボードをしまう
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -76,7 +77,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
-
+    
     @IBAction func tapMoveListPage(_ sender: Any) {
         //メールアドレス・パスワードをUDに保存
         let udMail = UserDefaults.standard
@@ -91,7 +92,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.navigationController?.pushViewController(anotherViewController, animated: true)
         
         //アラート生成
-        //UIAlertControllerのスタイルがalert
         let alert: UIAlertController = UIAlertController(title: "SUCCESS!", message:  "ログインしました", preferredStyle:  UIAlertController.Style.alert)
         // 確定ボタンの処理
         let confirmAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler:{
@@ -104,5 +104,28 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         alert.addAction(confirmAction)
         //実際にAlertを表示する
         present(alert, animated: true, completion: nil)
+    }
+}
+
+extension String {
+    /// TextFieldへ入力されたのが半角英数字かどうかを判定します。
+    /// - Returns: TextFieldへ入力されたのが半角英数字以外の場合、falseを返します。
+    func isHalfwidthAlphanumeric() -> Bool{
+        let pattern = "^[A-Za-z0-9]+$"
+        guard let regex = try? NSRegularExpression(pattern: pattern) else {
+            return false
+        }
+        let matches = regex.matches(in: self, options: [], range: NSRange(location: 0, length: self.count))
+        return matches.count > 0
+    }
+    /// TextFieldへ入力されたのがメールアドレス形式かどうかを判定します。
+    /// - Returns: TextFieldへ入力されたのがメールアドレス形式以外の場合、falseを返します。
+    func isEmailAdressFormat() -> Bool{
+        let pattern = "^[A-Z0-9a-z._+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}+$"
+        guard let regex = try? NSRegularExpression(pattern: pattern) else {
+            return false
+        }
+        let matches = regex.matches(in: self, options: [], range: NSRange(location: 0, length: self.count))
+        return matches.count > 0
     }
 }

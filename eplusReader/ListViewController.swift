@@ -11,8 +11,13 @@ class ListViewController: UIViewController, UISearchBarDelegate, UITableViewDele
     //検索バー関連
     @IBOutlet weak var bookSearchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
+    //ボタン関連
     var loginButton: UIBarButtonItem!
     var logoutButton: UIBarButtonItem!
+    
+    //検索結果をおく配列
+    var bookInfoArray = [BookInfo]()
+    var searchResult = [BookInfo]()
     
     //リストに表示する本の情報
     let bookInfo1 = BookInfo(bookCover: "rabit", bookTitle: "ビロードのうさぎ", author: "マージェリィ・W・ビアンコ", url: "https://www.amazon.co.jp/dp/4893094084/")
@@ -25,28 +30,24 @@ class ListViewController: UIViewController, UISearchBarDelegate, UITableViewDele
     let bookInfo8 = BookInfo(bookCover: "rabit", bookTitle: "ビロードのうさぎ", author: "マージェリィ・W・ビアンコ", url: "https://www.amazon.co.jp/dp/4893094084/")
     let bookInfo9 = BookInfo(bookCover: "rabit", bookTitle: "ビロードのうさぎ", author: "マージェリィ・W・ビアンコ", url: "https://www.amazon.co.jp/dp/4893094084/")
     let bookInfo10 = BookInfo(bookCover: "rabit", bookTitle: "ビロードのうさぎ", author: "マージェリィ・W・ビアンコ", url: "https://www.amazon.co.jp/dp/4893094084/")
-
-    //検索結果をおく配列
-    var bookInfoArray = [BookInfo]()
-    var searchResult = [BookInfo]()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        
-        //ログイン状態を確認
-        //print(UserDefaults.standard.string(forKey: "mailAdress"))
-        //print(UserDefaults.standard.string(forKey: "passWord"))
+    /// ログイン状態を判定するメソッド
+    func isJudgeState() {
         if(UserDefaults.standard.string(forKey: "mailAdress") == nil || UserDefaults.standard.string(forKey: "passWord") == nil) {
             loginButton = UIBarButtonItem(title: "login", style: .done, target: self, action: #selector(loginButtonTapped(_:)))
             self.navigationItem.rightBarButtonItem = loginButton
-        
-           // self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "login")
+            
         } else {
             logoutButton = UIBarButtonItem(title: "logout", style: .done, target: self, action: #selector(logoutButtonTapped(_:)))
             self.navigationItem.rightBarButtonItem = logoutButton
         }
+    }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        isJudgeState()
+        
         bookInfoArray = [bookInfo1, bookInfo2, bookInfo3, bookInfo4, bookInfo5, bookInfo6, bookInfo7, bookInfo8, bookInfo9, bookInfo10]
         
         self.navigationItem.titleView = UIImageView(image: UIImage(named: "titlelogo"))
@@ -57,12 +58,12 @@ class ListViewController: UIViewController, UISearchBarDelegate, UITableViewDele
         
         //入力のヒントとなる、プレースホルダーを設定
         bookSearchBar.placeholder = "検索"
-    
+        
         //何も入力されていなくてもReturnキーを押せるようにする。
         bookSearchBar.enablesReturnKeyAutomatically = false
         //検索結果配列にデータをコピーする。
         searchResult = bookInfoArray
-    
+        
         //次のページの戻るボタンの指定
         let backBarButtonItem = UIBarButtonItem()
         backBarButtonItem.title = "Back"
@@ -72,8 +73,7 @@ class ListViewController: UIViewController, UISearchBarDelegate, UITableViewDele
     //ログアウトボタンタップ時の処理
     @objc func logoutButtonTapped(_ sender: UIBarButtonItem) {
         //アラート生成
-        //UIAlertControllerのスタイルがalert
-        let alert: UIAlertController = UIAlertController(title: "ログアウトしますか？", message:  "表示させたいサブタイトル", preferredStyle:  UIAlertController.Style.alert)
+        let alert: UIAlertController = UIAlertController(title: "ログアウトしますか？", message:  "", preferredStyle:  UIAlertController.Style.alert)
         // 確定ボタンの処理
         let confirmAction: UIAlertAction = UIAlertAction(title: "はい", style: UIAlertAction.Style.default, handler: {
             // 確定ボタンが押された時の処理をクロージャ実装する
@@ -82,29 +82,24 @@ class ListViewController: UIViewController, UISearchBarDelegate, UITableViewDele
             UserDefaults.standard.removeObject(forKey: "mailAdress")
             UserDefaults.standard.removeObject(forKey: "passWord")
             print("確定")
-            //print(UserDefaults.standard.string(forKey: "mailAdress"))
-            //print(UserDefaults.standard.string(forKey: "passWord"))
-            if(UserDefaults.standard.string(forKey: "mailAdress") == nil || UserDefaults.standard.string(forKey: "passWord") == nil) {
-                self.loginButton = UIBarButtonItem(title: "login", style: .done, target: self, action: #selector(self.loginButtonTapped(_:)))
-                self.navigationItem.rightBarButtonItem = self.loginButton
-            } else {
-                self.logoutButton = UIBarButtonItem(title: "logout", style: .done, target: self, action: #selector(self.logoutButtonTapped(_:)))
-                self.navigationItem.rightBarButtonItem = self.logoutButton
-            }
+            //ログイン判定
+            self.isJudgeState()
         })
+        
         // キャンセルボタンの処理
         let cancelAction: UIAlertAction = UIAlertAction(title: "いいえ", style: UIAlertAction.Style.cancel, handler:{
             // キャンセルボタンが押された時の処理をクロージャ実装する
             (action: UIAlertAction!) -> Void in
             print("キャンセル")
         })
-    
+        
         //UIAlertControllerにキャンセルボタンと確定ボタンをActionを追加
         alert.addAction(cancelAction)
         alert.addAction(confirmAction)
-
+        
         //実際にAlertを表示する
         present(alert, animated: true, completion: nil)
+        
     }
     
     //ログイン時画面遷移
@@ -139,7 +134,7 @@ class ListViewController: UIViewController, UISearchBarDelegate, UITableViewDele
     func tableView(_ table: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 140.0
     }
-
+    
     //検索ボタンをクリック時
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         //検索結果配列を空にする。
@@ -165,7 +160,7 @@ class ListViewController: UIViewController, UISearchBarDelegate, UITableViewDele
         self.view.endEditing(true)
     }
     
-
+    
     //リスト詳細画面への遷移
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //まずは、違うstororyboardであることをここで定義します
@@ -178,5 +173,8 @@ class ListViewController: UIViewController, UISearchBarDelegate, UITableViewDele
         self.navigationController?.pushViewController(anotherViewController, animated: true)
         self.view.endEditing(true)
     }
+    
 }
+
+
 
