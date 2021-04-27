@@ -15,40 +15,20 @@ class ListViewController: UIViewController, UISearchBarDelegate, UITableViewDele
     var loginButton: UIBarButtonItem!
     var logoutButton: UIBarButtonItem!
     
+    //BookDataのインスタンス
+    var bookData = BookData()
+    
     //検索結果をおく配列
     var bookInfoArray = [BookInfo]()
     var searchResult = [BookInfo]()
     
-    //リストに表示する本の情報
-    let bookInfo1 = BookInfo(bookCover: "rabit", bookTitle: "ビロードのうさぎ", author: "マージェリィ・W・ビアンコ", url: "https://www.amazon.co.jp/dp/4893094084/")
-    let bookInfo2 = BookInfo(bookCover: "gurigura", bookTitle: "ぐりとぐら", author: "なかがわ　りえこ", url:"https://www.amazon.co.jp/dp/4834000826/")
-    let bookInfo3 = BookInfo(bookCover: "moimoi", bookTitle: "もいもい", author: "市原　淳", url: "https://www.amazon.co.jp/dp/4799321102/")
-    let bookInfo4 = BookInfo(bookCover: "searchStar", bookTitle: "星を探しに", author: "しもかわら　ゆみ", url: "https://www.amazon.co.jp/dp/4061333402/")
-    let bookInfo5 = BookInfo(bookCover: "rabit", bookTitle: "ビロードのうさぎ", author: "マージェリィ・W・ビアンコ", url: "https://www.amazon.co.jp/dp/4893094084/")
-    let bookInfo6 = BookInfo(bookCover: "rabit", bookTitle: "ビロードのうさぎ", author: "マージェリィ・W・ビアンコ", url: "https://www.amazon.co.jp/dp/4893094084/")
-    let bookInfo7 = BookInfo(bookCover: "rabit", bookTitle: "ビロードのうさぎ", author: "マージェリィ・W・ビアンコ", url: "https://www.amazon.co.jp/dp/4893094084/")
-    let bookInfo8 = BookInfo(bookCover: "rabit", bookTitle: "ビロードのうさぎ", author: "マージェリィ・W・ビアンコ", url: "https://www.amazon.co.jp/dp/4893094084/")
-    let bookInfo9 = BookInfo(bookCover: "rabit", bookTitle: "ビロードのうさぎ", author: "マージェリィ・W・ビアンコ", url: "https://www.amazon.co.jp/dp/4893094084/")
-    let bookInfo10 = BookInfo(bookCover: "rabit", bookTitle: "ビロードのうさぎ", author: "マージェリィ・W・ビアンコ", url: "https://www.amazon.co.jp/dp/4893094084/")
-    
-    /// ログイン状態を判定するメソッド
-    func isJudgeState() {
-        if(UserDefaults.standard.string(forKey: "mailAdress") == nil || UserDefaults.standard.string(forKey: "passWord") == nil) {
-            loginButton = UIBarButtonItem(title: "login", style: .done, target: self, action: #selector(loginButtonTapped(_:)))
-            self.navigationItem.rightBarButtonItem = loginButton
-            
-        } else {
-            logoutButton = UIBarButtonItem(title: "logout", style: .done, target: self, action: #selector(logoutButtonTapped(_:)))
-            self.navigationItem.rightBarButtonItem = logoutButton
-        }
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         isJudgeState()
         
-        bookInfoArray = [bookInfo1, bookInfo2, bookInfo3, bookInfo4, bookInfo5, bookInfo6, bookInfo7, bookInfo8, bookInfo9, bookInfo10]
+        bookInfoArray = [bookData.bookInfo1, bookData.bookInfo2, bookData.bookInfo3, bookData.bookInfo4, bookData.bookInfo5, bookData.bookInfo6, bookData.bookInfo7, bookData.bookInfo8, bookData.bookInfo9, bookData.bookInfo10]
         
         self.navigationItem.titleView = UIImageView(image: UIImage(named: "titlelogo"))
         //Deligate・datasourceの通知先を設定
@@ -68,6 +48,18 @@ class ListViewController: UIViewController, UISearchBarDelegate, UITableViewDele
         let backBarButtonItem = UIBarButtonItem()
         backBarButtonItem.title = "Back"
         self.navigationItem.backBarButtonItem = backBarButtonItem
+    }
+    
+    /// ログイン状態を判定するメソッド
+    func isJudgeState() {
+        if(UserDefaults.standard.string(forKey: "mailAdress") == nil || UserDefaults.standard.string(forKey: "passWord") == nil) {
+            loginButton = UIBarButtonItem(title: "login", style: .done, target: self, action: #selector(loginButtonTapped(_:)))
+            self.navigationItem.rightBarButtonItem = loginButton
+            
+        } else {
+            logoutButton = UIBarButtonItem(title: "logout", style: .done, target: self, action: #selector(logoutButtonTapped(_:)))
+            self.navigationItem.rightBarButtonItem = logoutButton
+        }
     }
     
     //ログアウトボタンタップ時の処理
