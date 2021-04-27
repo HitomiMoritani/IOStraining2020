@@ -80,10 +80,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func tapMoveListPage(_ sender: Any) {
         //メールアドレス・パスワードをUDに保存
-        let udMail = UserDefaults.standard
-        let udPassWord = UserDefaults.standard
-        udMail.set(inputMail.text, forKey: "mailAdress")
-        udPassWord.set(inputPassWord.text, forKey: "passWord")
+        UserDefaults.standard.set(inputMail.text, forKey: "mailAdress")
+        UserDefaults.standard.set(inputPassWord.text, forKey: "passWord")
         //どのStoryBoardかを指定
         let anotherStoryboard: UIStoryboard = UIStoryboard(name: "List", bundle: nil)
         //どのviewかを指定

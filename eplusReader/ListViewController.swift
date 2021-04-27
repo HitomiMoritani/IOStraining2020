@@ -122,7 +122,7 @@ class ListViewController: UIViewController, UISearchBarDelegate, UITableViewDele
         return cell
     }
     
-    //Cell の高さを１２０にする
+    //Cell の高さを１４０にする
     func tableView(_ table: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 140.0
     }
